@@ -1,0 +1,66 @@
+/* ==UserStyle==
+@name           Logseq-dark-hpx
+@namespace      https://github.com/cannibalox/logseq-dark-hpx
+@version        0.0.1
+@description    dark mode for logseq
+@author         _ph / www.hpx1.com
+@updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-dark-hpx.user.css
+==/UserStyle== */
+
+@-moz-document domain("logseq.com") {
+.dark-theme {
+    color: #e6e6e6;
+}	
+.dark-theme .bg-base-3 {
+    background-color: #232e34;
+}
+:root {
+    scrollbar-color: #516e83 #2e3645 !important;
+}
+.dark-theme #search-wrapper {
+    color: #898b85;
+}
+.dark-theme input {
+    color: #dfdfdf;
+    background: 0 0;
+        background-color: rgba(25, 29, 31, .72) !important;
+        background-position-x: 0px;
+        background-position-y: 0px;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-image: none;
+        background-size: auto;
+        background-origin: padding-box;
+        background-clip: border-box;
+	margin-left: -5px;
+}
+.dark-theme a:hover {
+    color: #77d47c;
+
+}
+.dark-theme a.menu-link:hover, .dark-theme button.menu:focus, .dark-theme button.pull:hover {
+    background-color: #293e44;
+}	
+/*=== h1 h2 ====*/
+.dark-theme .page-references h2, .dark-theme h1.title {
+    color: #b9ca96;
+}	
+/* === links ====*/ 	
+.dark-theme .content a {
+    color: #489be5;
+}	
+/* === bullets ====*/ 	
+.dark-theme .bullet-container .bullet {
+    background-color: #5181ac;
+}
+/*=== tree lines ===*/	
+.dark-theme .heading-children {
+    border-left: 1px solid #34555e;
+}
+/* === backlinks box ====*/ 	
+.dark-theme .bg-base-2 {
+    background-color: #1c272d;
+	font-size:13px;
+}	
+	
+}
