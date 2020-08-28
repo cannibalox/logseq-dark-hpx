@@ -1,66 +1,149 @@
 /* ==UserStyle==
 @name           Logseq-dark-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.0.1
+@version        0.0.5
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-dark-hpx.user.css
 ==/UserStyle== */
 
 @-moz-document domain("logseq.com") {
+	
+:root {
+	--bgcolor: #232e34;
+	--bgcolor-alt: rgba(22, 31, 35, .72);
+	--bgcolor-alt2: #1a1f20;
+	--bgcolor-alt3: #000;
+	--bghover: #286c91;
+	--bgselected: #25546d;
+	--text-color: #e6e6e6;
+	--text-muted: #898b85;
+	--text-hover:#77d47c;
+	--text-accent:#6acde7;
+	--text-accent2:#326989;
+	--text-contrast:#d1b03c;
+	--text-links: #5ebbdb;
+	--border: #374d57;
+	--highlight:#c5d049;
+}
+	
 .dark-theme {
-    color: #e6e6e6;
+    color: var(--text-color);
 }	
 .dark-theme .bg-base-3 {
-    background-color: #232e34;
+    background-color: var(--bgcolor);
 }
-:root {
-    scrollbar-color: #516e83 #2e3645 !important;
-}
+/*====NW search====*/
 .dark-theme #search-wrapper {
-    color: #898b85;
+    color: var(--text-muted);
 }
 .dark-theme input {
     color: #dfdfdf;
     background: 0 0;
-        background-color: rgba(25, 29, 31, .72) !important;
-        background-position-x: 0px;
-        background-position-y: 0px;
-        background-repeat: repeat;
-        background-attachment: scroll;
-        background-image: none;
-        background-size: auto;
-        background-origin: padding-box;
-        background-clip: border-box;
-	margin-left: -5px;
+    background-color: var(--bgcolor-alt) !important;
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: none;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+	margin-left: -9px;
+	height:36px;
+	margin-top:7px;
+	padding-left: 3em !important;
+	width:300px;
+}
+.dark-theme a, .dark-theme button.menu {
+    color: #acb5b7;
 }
 .dark-theme a:hover {
-    color: #77d47c;
-
+    color: var(--text-hover);
 }
 .dark-theme a.menu-link:hover, .dark-theme button.menu:focus, .dark-theme button.pull:hover {
-    background-color: #293e44;
-}	
+    background-color: var(--bghover);
+}
+.dark-theme a.chosen {
+    background: var(--bgselected);
+    background-color: var(--bgselected);
+}
 /*=== h1 h2 ====*/
 .dark-theme .page-references h2, .dark-theme h1.title {
-    color: #b9ca96;
-}	
+    color: var(--text-accent);
+}
+/*=== highlights ====*/
+mark {
+    background: var(--highlight);
+}
 /* === links ====*/ 	
 .dark-theme .content a {
-    color: #489be5;
+    color: var(--text-links);
 }	
 /* === bullets ====*/ 	
 .dark-theme .bullet-container .bullet {
-    background-color: #5181ac;
+    background-color: var(--text-accent2);
+}
+/* === tags ====*/ 
+a.tag {
+    opacity: 1;
+	color: var(--text-contrast);
 }
 /*=== tree lines ===*/	
-.dark-theme .heading-children {
-    border-left: 1px solid #34555e;
+.dark-theme .block-children {
+    border-left: 1px solid var(--border);
 }
 /* === backlinks box ====*/ 	
 .dark-theme .bg-base-2 {
-    background-color: #1c272d;
+    background-color: var(--bgcolor-alt);
 	font-size:13px;
+}
+/* === blockquote ====*/ 	
+.dark-theme blockquote {
+    background-color: var(--bgcolor-alt2);
+    border-left: 3px solid var(--text-accent2);
+}
+/* === quote block important === */
+.admonitionblock {
+    margin: 1rem 0;
+}
+.pr-4 {
+    padding-right: 0.7rem;
+}
+/* === codeblocks ====*/ 	
+.dark-theme .non-block-editor textarea, .dark-theme pre, .dark-theme pre.code {
+    background: var(--bgcolor-alt3)
+}
+/* === right-sidebar ===*/
+.dark-theme #right-sidebar {
+    background-color: var(--bgcolor);
+	border-left: 1px solid var(--border);
+}
+.dark-theme #right-sidebar .sidebar-item {
+    border-top: 1px solid var(--border);
+}
+.dark-theme th {
+    color: #b4bd2f;
+	background-color: var(--bgcolor-alt3);
+	border-bottom: 1px solid var(--border);
 }	
-	
+.dark-theme #right-sidebar .non-block-editor textarea, .dark-theme #right-sidebar pre, .dark-theme #right-sidebar pre.code {
+    background:  var(--bgcolor-alt3);
+}
+/* === rscrollbars===*/
+:root {
+	scrollbar-color: var(--text-accent2) var(--bgcolor-alt) !important;
+	scrollbar-width: initial !important;
+}
+.dark-theme tr:nth-child(2n),
+.dark-theme tr:nth-child(2n+1) {
+    background: var(--bgcolor-alt);
+	border-bottom: 1px solid var(--border);
+}
+/* === NE top bar ===*/
+.bg-green-600 {
+    --bg-opacity: 1;
+    background-color: #0c9a6d;
+    background-color: rgba(65,180,65,var(--bg-opacity));
+}
 }
