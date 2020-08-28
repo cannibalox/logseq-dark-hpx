@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Logseq-dark-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.0.5
+@version        0.0.7
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-dark-hpx.user.css
@@ -49,12 +49,16 @@
     background-size: auto;
     background-origin: padding-box;
     background-clip: border-box;
-	margin-left: -9px;
+	margin-left: 0px;
 	height:36px;
 	margin-top:7px;
 	padding-left: 3em !important;
 	width:300px;
 }
+.left-0 {
+    left: 9px;
+}
+/*===    ====*/
 .dark-theme a, .dark-theme button.menu {
     color: #acb5b7;
 }
@@ -71,6 +75,10 @@
 /*=== h1 h2 ====*/
 .dark-theme .page-references h2, .dark-theme h1.title {
     color: var(--text-accent);
+}
+/*=== h1 h2 ====*/
+.dark-theme hr {
+    border-color: var(--border);
 }
 /*=== highlights ====*/
 mark {
@@ -130,15 +138,47 @@ a.tag {
 .dark-theme #right-sidebar .non-block-editor textarea, .dark-theme #right-sidebar pre, .dark-theme #right-sidebar pre.code {
     background:  var(--bgcolor-alt3);
 }
-/* === rscrollbars===*/
-:root {
-	scrollbar-color: var(--text-accent2) var(--bgcolor-alt) !important;
-	scrollbar-width: initial !important;
-}
 .dark-theme tr:nth-child(2n),
 .dark-theme tr:nth-child(2n+1) {
     background: var(--bgcolor-alt);
 	border-bottom: 1px solid var(--border);
+}
+/* === rscrollbars===*/
+.dark-theme ::-webkit-scrollbar{
+    background-color:#001f27;border:4px solid #001f27;border-radius:8px
+    }
+.dark-theme ::-webkit-scrollbar-track-piece{
+    background-color:#001f27;border:4px solid #001f27;border-radius:8px
+    }
+.dark-theme ::-webkit-scrollbar-thumb{
+    background-color:#073642;border-radius:8px;background-clip:padding-box;min-height:28px
+    }
+.dark-theme ::-webkit-scrollbar-thumb:hover{background-color:rgba(180,180,180,.4)}.svg-shadow{-webkit-filter:drop-shadow( 1px 1px 2px rgba(0, 0, 0, .7));filter:drop-shadow( 1px 1px 2px rgba(0, 0, 0, .5))}.tip-shadow{-webkit-filter:drop-shadow( 1px 1px 2px rgba(155,155,0,.8));filter:drop-shadow( 1px 1px 2px rgba(155,155,0,.8))}svg.note{color:#19407c}
+.dark-theme ::-webkit-scrollbar-thumb {
+    background-color: var(--text-accent2);
+    border-radius: 0px;
+    background-clip: padding-box;
+    min-height: 28px;
+}   
+/*=====settings===*/
+.dark-theme .form-select {
+    background-color: var(--text-accent2);
+    background-repeat: no-repeat;
+}
+.border-gray-300 {
+    --border-opacity: 1;
+    border-color: #d2d6dc;
+    border-color: rgba(210,214,220,0);
+}   
+.form-input {
+    appearance: none;
+    background-color: #fff;
+    border-color: #d2d6dc;
+    border-width: 0px;
+    border-radius: .375rem;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 /* === NE top bar ===*/
 .bg-green-600 {
