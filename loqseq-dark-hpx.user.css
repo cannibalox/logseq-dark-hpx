@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Logseq-dark-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.0.7
+@version        0.1.0
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-dark-hpx.user.css
@@ -21,10 +21,12 @@
 	--text-hover:#77d47c;
 	--text-accent:#6acde7;
 	--text-accent2:#326989;
-	--text-contrast:#d1b03c;
+	--text-contrast:#cb6fd5;
+    --text-accent3: #6bdf64;
 	--text-links: #5ebbdb;
 	--border: #374d57;
-	--highlight:#c5d049;
+	--highlight:#9ad94e;
+    --tagpills:#325dba;
 }
 	
 .dark-theme {
@@ -76,6 +78,10 @@
 .dark-theme .page-references h2, .dark-theme h1.title {
     color: var(--text-accent);
 }
+/* === page ref ===*/
+span.page-reference a.page-ref {
+    color: var(--text-accent3);    
+    }
 /*=== h1 h2 ====*/
 .dark-theme hr {
     border-color: var(--border);
@@ -95,8 +101,33 @@ mark {
 /* === tags ====*/ 
 a.tag {
     opacity: 1;
-	color: var(--text-contrast);
+	color: white !important;
+    background-color: var(--tagpills);
+    border: none;
+    font-size: 10px;
+    padding: 1px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 5px 0px 0px;
+    height: 15px;
+    cursor: pointer;
+    border-radius: 14px;
 }
+.tag:hover {
+    color: white;
+    background-color: var(--text-links);
+}
+a.tag[href*="important"] {
+  background-color: #af1414;
+}    
+a.tag[href*="inprogress"] {
+  background-color: #c38b0a;
+}       
+a.tag[href*="done"] {
+  background-color: #24bb0a;
+}      
+
 /*=== tree lines ===*/	
 .dark-theme .block-children {
     border-left: 1px solid var(--border);
@@ -122,6 +153,11 @@ a.tag {
 .dark-theme .non-block-editor textarea, .dark-theme pre, .dark-theme pre.code {
     background: var(--bgcolor-alt3)
 }
+.dark-theme :not(pre)>code {
+    background: var(--bgcolor-alt3);
+    color: #ff5757;
+}
+
 /* === right-sidebar ===*/
 .dark-theme #right-sidebar {
     background-color: var(--bgcolor);
@@ -138,24 +174,25 @@ a.tag {
 .dark-theme #right-sidebar .non-block-editor textarea, .dark-theme #right-sidebar pre, .dark-theme #right-sidebar pre.code {
     background:  var(--bgcolor-alt3);
 }
+    
+.dark-theme th {
+    color: var(--text-contrast);
+}    
+    
 .dark-theme tr:nth-child(2n),
 .dark-theme tr:nth-child(2n+1) {
     background: var(--bgcolor-alt);
 	border-bottom: 1px solid var(--border);
 }
 /* === rscrollbars===*/
-.dark-theme ::-webkit-scrollbar{
-    background-color:#001f27;border:4px solid #001f27;border-radius:8px
-    }
 .dark-theme ::-webkit-scrollbar-track-piece{
-    background-color:#001f27;border:4px solid #001f27;border-radius:8px
+    background-color:var(--bgcolor-alt);border:0px solid #001f27;border-radius:0px
     }
-.dark-theme ::-webkit-scrollbar-thumb{
-    background-color:#073642;border-radius:8px;background-clip:padding-box;min-height:28px
+.dark-theme ::-webkit-scrollbar-thumb:hover{
+    background-color:rgba(180,180,180,.4)
     }
-.dark-theme ::-webkit-scrollbar-thumb:hover{background-color:rgba(180,180,180,.4)}.svg-shadow{-webkit-filter:drop-shadow( 1px 1px 2px rgba(0, 0, 0, .7));filter:drop-shadow( 1px 1px 2px rgba(0, 0, 0, .5))}.tip-shadow{-webkit-filter:drop-shadow( 1px 1px 2px rgba(155,155,0,.8));filter:drop-shadow( 1px 1px 2px rgba(155,155,0,.8))}svg.note{color:#19407c}
 .dark-theme ::-webkit-scrollbar-thumb {
-    background-color: var(--text-accent2);
+    background-color: var(--border);
     border-radius: 0px;
     background-clip: padding-box;
     min-height: 28px;
@@ -186,4 +223,14 @@ a.tag {
     background-color: #0c9a6d;
     background-color: rgba(65,180,65,var(--bg-opacity));
 }
+/* === NE top bar ===*/
+.opacity-50 {
+    opacity: 1;
+    color: var(--text-accent3);
+}
+.block-parents.flex-row.flex a {
+    opacity: 1;
+    color: var(--text-accent);
+}
+
 }
