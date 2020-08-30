@@ -1,14 +1,22 @@
 /* ==UserStyle==
 @name           Logseq-dark-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.1.0
+@version        0.1.2
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-dark-hpx.user.css
 ==/UserStyle== */
 
 @-moz-document domain("logseq.com") {
-	
+/* latin */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Cairo Regular'), local('Cairo-Regular'), url(https://fonts.gstatic.com/s/cairo/v7/SLXGc1nY6HkvalIhTps.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}	
 :root {
 	--bgcolor: #232e34;
 	--bgcolor-alt: rgba(22, 31, 35, .72);
@@ -28,7 +36,9 @@
 	--highlight:#9ad94e;
     --tagpills:#325dba;
 }
-	
+html {
+    font-family: Cairo, Inter,sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol!important;
+}	
 .dark-theme {
     color: var(--text-color);
 }	
@@ -196,7 +206,12 @@ a.tag[href*="done"] {
     border-radius: 0px;
     background-clip: padding-box;
     min-height: 28px;
-}   
+}  
+/* ==== scrollbar FF ====*/
+:root {
+    scrollbar-color: var(--border) var(--bgcolor-alt2) !important;
+	scrollbar-width: auto !important;
+}
 /*=====settings===*/
 .dark-theme .form-select {
     background-color: var(--text-accent2);
