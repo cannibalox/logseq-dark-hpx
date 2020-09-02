@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Logseq-dark-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.1.2
+@version        0.1.5
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-dark-hpx.user.css
@@ -49,7 +49,7 @@ html {
 .dark-theme #search-wrapper {
     color: var(--text-muted);
 }
-.dark-theme input {
+.dark-theme #search_field {
     color: #dfdfdf;
     background: 0 0;
     background-color: var(--bgcolor-alt) !important;
@@ -247,5 +247,51 @@ a.tag[href*="done"] {
     opacity: 1;
     color: var(--text-accent);
 }
-
+/* === checkboxes ===*/
+.form-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    background-origin: border-box;
+    user-select: none;
+    flex-shrink: 0;
+    height: 1rem;
+    width: 1rem;
+    border-color: var(--text-accent2) !important;
+	background-color: var(--bgcolor-alt2) !important;
+    border-width: 1px;
+    border-radius: 50%;
+}
+/* === to do  ===*/
+.marker-switch {
+    font-size: 80%;
+    margin-right: 6px;
+    margin-left: 2px;
+    border-radius: 3px;
+    font-weight: 700;
+    display: inline-block;
+    width: 17px;
+    height: 20px;
+    opacity: 0.75;
+    padding: 0 2px 0 3px;
+    border: 1px solid;
+}
+#later, #doing {
+	color: #ff8400;		
+}
+#now, #todo {
+	color: #ff3113;	
+	font-weight: 700;
+}
+#waiting {
+	color: #fae257;		
+	}
+#done {
+	color: #00ff18;		
+	}
+#canceled {
+	color: #21a8e6;		
+	}
+.done {
+	color: #00ff18 !important;		
+}
 }
