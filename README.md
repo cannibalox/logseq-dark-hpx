@@ -13,5 +13,9 @@ user.css dark theme for logseq, works with [Stylus](https://github.com/openstyle
 
 (Click the button to install the theme in Stylus)
 ![](https://github.com/dale502/logseq-dark-hpx/blob/master/Logseq-dark-dale502.jpg)
-Click the button below to install the alternate color variant by Dale502 :
 
+
+### How to install Stylus 
+https://github.com/openstyles/stylus#releases
+### How to install a Stylus theme
+https://github.com/openstyles/stylus/wiki/Usercss#how-do-i-install-usercss
