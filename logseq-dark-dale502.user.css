@@ -1,0 +1,167 @@
+/* ==UserStyle==
+@name           Logseq-dark-dale502
+@namespace      https://github.com/dale502/logseq-dark-hpx
+@version        0.1.5
+@description    alternate dark mode for logseq by dale502
+@author         _ph / www.hpx1.com / Dale 502
+@updateURL      https://raw.githubusercontent.com/dale502/logseq-dark-hpx/master/logseq-dark-dale502.user.css
+==/UserStyle== */
+
+@-moz-document domain("logseq.com") {
+:root {
+  --bgcolor: #252528;
+  --bgcolor-alt: #202023;
+  --bgcolor-alt2: #353538;
+  --bgcolor-alt3: #282A36;
+  --bghover: #202023;
+  --bgselected: #252528;
+  --text-color: #BEBEBF;
+  --text-muted: #BEBEBF;
+  --text-hover:#feb86cd4;
+  --text-accent:#BEBEBF;
+  --text-accent2:#BEBEBF;
+  --text-contrast:#BEBEBF;
+  --text-accent3: #feb86cd4;
+  --text-links: #94c862c9;
+  --border: #202023;
+  --highlight:#BEBEBF;
+  --tagpills:#0000000a;
+}
+.dark-theme {
+    color: var(--text-color);
+}
+.dark-theme .bg-base-3 {
+    background-color: var(--bgcolor);
+}
+.dark-theme #search-wrapper {
+    color: var(--text-muted);
+}
+.dark-theme #search_field {
+    color: #BEBEBF;
+}
+.dark-theme a, .dark-theme button.menu {
+    color: #BEBEBF;
+}
+.dark-theme a:hover {
+    color: var(--text-hover);
+}
+.dark-theme a.menu-link:hover, .dark-theme button.menu:focus, .dark-theme button.pull:hover {
+    background-color: var(--bghover);
+}
+.dark-theme a.chosen {
+    background-color:#282A36;
+}
+/*=== h1 h2 ====*/
+.dark-theme .page-references h2, .dark-theme h1.title {
+    color: var(--text-accent);
+}
+/* === page ref [[]]===*/
+span.page-reference a.page-ref {
+    color:#feb86cd4;    
+    }
+/* === page ref title ===*/
+div.hd-control a.page-ref {
+    color:#BEBEBF;    
+    }
+/* === links ====*/ 	
+.dark-theme .content a {
+    color:#94c862c9;
+}
+/* === arrow block unfold ====*/ 	
+a.block-control {
+    color:#feb86cd4!important;
+}
+/*=== highlights ====*/
+mark {
+    background: var(--highlight);
+}
+/* === bullets ====*/ 	
+.dark-theme .bullet-container .bullet {
+    background-color: var(--text-accent2);
+}
+.dark-theme .bullet-closed {
+    background-color: #bebebf42;
+}
+a.tag {
+    opacity: 0.92;
+	color: #feb86cd4 !important;
+}
+/* === backlinks box ====*/ 	
+.dark-theme .bg-base-2 {
+    background-color:#202023db;
+	font-size:15px;
+}
+.dark-theme #right-sidebar .bg-base-2 {    background-color: #202023db;}
+/* === codeblocks ====*/ 	
+.dark-theme .non-block-editor textarea, .dark-theme pre, .dark-theme pre.code {
+    background: var(--bgcolor-alt3)
+}
+.dark-theme :not(pre)>code {
+    background: var(--bgcolor-alt3);
+    color: #84A9DA;
+}
+/* === right-sidebar ===*/
+.dark-theme #right-sidebar {
+    background-color: #20202375;
+}
+.dark-theme th {
+    color: #BEBEBF;
+	background-color: var(--bgcolor-alt3);
+}	
+.dark-theme #right-sidebar .non-block-editor textarea, .dark-theme #right-sidebar pre, .dark-theme #right-sidebar pre.code {
+    background:  var(--bgcolor-alt3);
+}
+/* === rscrollbars===*/
+.dark-theme ::-webkit-scrollbar-track-piece{
+    background-color:#252528;border:0px solid var(--text-accent3);border-radius:0px
+    }
+.dark-theme ::-webkit-scrollbar-thumb:hover{
+    background-color:#303f53
+    }
+.dark-theme ::-webkit-scrollbar-thumb {
+    background-color: #282A36;
+    border-radius: 0px;
+    background-clip: padding-box;
+    min-height: 28px;
+}   
+/*=====settings===*/
+.dark-theme .form-select {
+    background-color:#202023;
+    background-repeat: no-repeat;
+}
+.border-gray-300 {
+    --border-opacity: 1;
+    border-color: #d2d6dc;
+    border-color: rgba(210,214,220,0);
+}   
+.form-input {
+    appearance: none;
+    background-color: #fff;
+    border-color: #d2d6dc;
+    border-width: 0px;
+    border-radius: .375rem;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color:var(--text-color) !important;
+}
+/* === checkboxes ===*/
+.form-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    background-origin: border-box;
+    user-select: none;
+    flex-shrink: 0;
+    height: 1rem;
+    width: 1rem;
+    border-color: var(--text-accent2) !important;
+	background-color: var(--bgcolor-alt2) !important;
+    border-width: 1px;
+    border-radius: 50%;
+}
+
+.dark-theme tr:nth-child(2n),
+.dark-theme tr:nth-child(2n+1) {
+    background: var(--bgcolor-alt);
+}
+}
