@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Logseq-dark-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.1.5
+@version        0.2.5
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-dark-hpx.user.css
@@ -36,13 +36,159 @@
 	--highlight:#9ad94e;
     --tagpills:#325dba;
 }
+.dark-theme {
+    --ls-primary-background-color:#232e34; /* #1b2122;*/
+    --ls-secondary-background-color: #141819;
+    --ls-tertiary-background-color: #0f4552;
+    --ls-block-properties-background-color: #181c1d;
+    --ls-search-background-color: #000000;
+    --ls-border-color: #323232;
+    --ls-menu-hover-color: var(--ls-secondary-background-color);
+    --ls-primary-text-color: #cecece;
+    --ls-secondary-text-color: #b5b5b5;
+    --ls-title-text-color: #72d5fc;
+    --ls-link-text-color: #82c4ff;
+    --ls-link-text-hover-color: #d973de;
+    --ls-link-ref-text-color: var(--ls-link-text-color);
+    --ls-link-ref-text-hover-color: var(--ls-link-text-hover-color);
+    --ls-tag-text-color: var(--ls-link-text-color);
+    --ls-tag-text-hover-color: var(--ls-link-text-hover-color);
+    --ls-block-bullet-border-color: #4a95e0;
+    --ls-block-bullet-color: #477ba8;
+    --ls-block-highlight-color: #202e3a;
+    --ls-page-checkbox-color: #4e7c9a;
+    --ls-page-checkbox-border-color: var(--ls-primary-background-color);
+    --ls-page-blockquote-color: var(--ls-primary-text-color);
+    --ls-page-blockquote-bg-color: var(--ls-secondary-background-color);
+    --ls-page-blockquote-border-color: var(--ls-secondary-text-color);
+    --ls-page-inline-code-color: #fe46c0;
+    --ls-page-inline-code-bg-color: #1b191b;
+    --ls-scrollbar-color: #000;
+    --ls-scrollbar-thumb-hover-color: #88ee35;
+    --ls-scrollbar-thumb-color: #2d475a;
+    --ls-head-text-color: var(--ls-link-text-color);
+    --ls-icon-color: var(--ls-link-text-color);
+    --ls-search-icon-color: #74ae48;
+    --ls-a-chosen-bg: var(--ls-secondary-background-color);
+    --ls-right-sidebar-code-bg-color: #04303c;
+}    
+/* == fonts == */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Cairo Regular'), local('Cairo-Regular'), url(https://fonts.gstatic.com/s/cairo/v7/SLXGc1nY6HkvalIhTps.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}	
 html {
     font-family: Cairo, Inter,sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol!important;
-}	
+}
+/* == search == */   
+#search_field {
+    background-color: var(--ls-search-background-color);
+    color: var(--ls-secondary-text-color);
+    height: 30px;
+    padding : 0px 50px;
+    margin: 10px -5px;
+}
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 35%), 0 4px 6px -2px rgba(0,0,0,.05);
+}
+a.menu-link {
+    background-color: #fff;
+    background-color: var(--ls-secondary-background-color);
+}
+.bg-base-3 {
+    background-color: var(--ls-secondary-background-color);
+}
+/* == style == */
+a {color: #6fe87d;} 
+.bullet-container .bullet {
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: var(--ls-block-bullet-color);
+    }
+.bullet-closed {
+    background-color: #23486600;
+    border: 1px solid #57a3dad9;
+}
+mark {
+    background: #64e160;
+    color: #262626;
+    padding: 0 4px;
+    border-radius: 5px;
+} 
+/* == blocks paragrah== */
+.ls-block {
+    margin: 0 auto;
+    padding: 4px 0;
+}
+/* == codemirror == */
+.CodeMirror {
+    font-family: Fira Code, Consolas, monospace;
+    font-size : 12px;
+    color: #000;
+    direction: ltr;
+}
+.CodeMirror-gutter, .CodeMirror-gutters, .CodeMirror-linenumber, .CodeMirror-scroll, .CodeMirror-sizer {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    background-color: black;
+}
+.CodeMirror-gutters {
+    border-right: 1px solid #4e4e4e;
+    background-color: #141313;
+    white-space: nowrap;
+}
+.CodeMirror-linenumber {
+    padding: 0 3px 0 5px;
+    min-width: 20px;
+    text-align: right;
+    color: #919191;
+    white-space: nowrap;
+}
+.CodeMirror pre.CodeMirror-line, .CodeMirror pre.CodeMirror-line-like {
+    background-color: black;
+    color:#9c9c9c;
+    }
+.cm-s-default .cm-string {
+    color: #f8cc1c;
+}  
+.cm-s-default .cm-atom {
+    color: #48ee89;
+}
+.cm-s-default .cm-builtin {
+    color: #a37ef8;
+}
+.cm-s-default .cm-keyword {
+    color: #e741ff;
+}
+/*== code */
+.extensions__code-lang {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .25rem;
+    font-size: .875rem;
+    color: rgb(168, 160, 126);
+    z-index: 1;
+    background: #000;
+}
+/* == scrollbar */
+.dark-theme ::-webkit-scrollbar-thumb {
+    background-color: var(--ls-scrollbar-thumb-color) ;
+}
+
+/*======*/
 .dark-theme {
     color: var(--text-color);
 }	
 .dark-theme .bg-base-3 {
+    background-color: var(--bgcolor);
+}
+body, html {
     background-color: var(--bgcolor);
 }
 /*====NW search====*/
