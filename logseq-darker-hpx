@@ -1,0 +1,205 @@
+/* ==UserStyle==
+@name           Logseq-darker-hpx
+@namespace      https://github.com/cannibalox/logseq-dark-hpx
+@version        0.2.6
+@description    dark mode for logseq
+@author         _ph / www.hpx1.com
+@updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-darker-hpx.user.css
+==/UserStyle== */
+
+@-moz-document domain("logseq.com") {
+.dark-theme {
+    --ls-primary-background-color: #1b2122;
+    --ls-secondary-background-color: #141819;
+    --ls-tertiary-background-color: #1b1f22;
+    --ls-block-properties-background-color: #181c1d;
+    --ls-search-background-color: #000000;
+    --ls-border-color: #323232;
+    --ls-menu-hover-color: #1c3444;
+    --ls-primary-text-color: #cecece;
+    --ls-secondary-text-color: #b5b5b5;
+    --ls-title-text-color: #72d5fc;
+    --ls-link-text-color: #82c4ff;
+    --ls-link-text-hover-color: #d973de;
+    --ls-link-ref-text-color: var(--ls-link-text-color);
+    --ls-link-ref-text-hover-color: var(--ls-link-text-hover-color);
+    --ls-tag-text-color: var(--ls-link-text-color);
+    --ls-tag-text-hover-color: var(--ls-link-text-hover-color);
+    --ls-block-bullet-border-color: #4a95e0;
+    --ls-block-bullet-color: #477ba8;
+    --ls-block-highlight-color: #202e3a;
+    --ls-page-checkbox-color: #4e7c9a;
+    --ls-page-checkbox-border-color: #477ba8;
+    --ls-page-blockquote-color: var(--ls-primary-text-color);
+    --ls-page-blockquote-bg-color: var(--ls-secondary-background-color);
+    --ls-page-blockquote-border-color: var(--ls-secondary-text-color);
+    --ls-page-inline-code-color: #fe46c0;
+    --ls-page-inline-code-bg-color: #1b191b;
+    --ls-scrollbar-color: #000;
+    --ls-scrollbar-thumb-hover-color: #88ee35;
+    --ls-scrollbar-thumb-color: #2d475a;
+    --ls-head-text-color: var(--ls-link-text-color);
+    --ls-icon-color: var(--ls-link-text-color);
+    --ls-search-icon-color: #74ae48;
+    --ls-a-chosen-bg: #172a36;
+    --ls-right-sidebar-code-bg-color: #04303c;
+}    
+/* == fonts == */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cairo Regular'), local('Cairo-Regular'), url(https://fonts.gstatic.com/s/cairo/v7/SLXGc1nY6HkvalIhTps.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}	
+html {
+    font-family: Cairo, Inter,sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol!important;
+}
+/* == search == */   
+#search_field {
+    background-color: var(--ls-search-background-color);
+    color: var(--ls-secondary-text-color);
+    height: 30px;
+    padding : 0px 50px;
+    margin: 10px -5px;
+}
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 35%), 0 4px 6px -2px rgba(0,0,0,.05);
+}
+a.menu-link {
+    background-color: var(--ls-secondary-background-color);
+    color: var(--ls-link-text-hover-color)
+}
+a.menu-link:hover {
+    color: var(--ls-link-text-hover-color);
+    background-color: var(--ls-menu-hover-color);
+}
+a.chosen {
+    background: var(--ls-a-chosen-bg);
+	font-weight: bold;
+}
+a {color: #6fe87d;} 
+.bullet-container .bullet {
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: var(--ls-block-bullet-color);
+    }
+.bg-base-3 {
+    background-color: var(--ls-secondary-background-color);
+}
+.bullet-closed {
+    background-color: #23486600;
+    border: 1px solid #57a3dad9;
+}
+mark {
+    background: #64e160;
+    color: #262626;
+    padding: 0 4px;
+    border-radius: 5px;
+} 
+/* == blocks == */
+.ls-block {
+    margin: 0 auto;
+    padding: 4px 0;
+}
+/* === checkboxes ===*/
+.form-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    background-origin: border-box;
+    user-select: none;
+    flex-shrink: 0;
+    height: 1rem;
+    width: 1rem;
+    border-color: var(--ls-page-checkbox-border-color) !important;
+	background-color: var(--ls-primary-background-color) !important;
+    border-width: 1px;
+    border-radius: 20%;
+}
+.marker-switch {
+    font-size: 0.73rem;
+    margin: 0px 6px 0px 2px;
+    border-radius: 3px;
+    font-weight: 700;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    opacity: 0.5;
+    padding: 0px 0px 0px 3px;
+    border: 1px solid;
+}
+/* == codemirror == */
+.CodeMirror {
+    font-family: Fira Code, Consolas, monospace;
+    font-size : 12px;
+    color: #4a95e0;
+    direction: ltr;
+}
+
+.CodeMirror-gutter, .CodeMirror-gutters, .CodeMirror-linenumber, .CodeMirror-scroll, .CodeMirror-sizer {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    background-color: black;
+}
+.CodeMirror-gutters {
+    border-right: 1px solid #4e4e4e;
+    background-color: #141313;
+    white-space: nowrap;
+}
+.CodeMirror-linenumber {
+    padding: 0 3px 0 5px;
+    min-width: 20px;
+    text-align: right;
+    color: #919191;
+    white-space: nowrap;
+}
+.CodeMirror pre.CodeMirror-line, .CodeMirror pre.CodeMirror-line-like {   
+    color:#9c9c9c;
+    }
+.cm-s-default .cm-string {
+    color: #f8cc1c;
+}  
+.cm-s-default .cm-atom {
+    color: #48ee89;
+}
+.cm-s-default .cm-builtin {
+    color: #a37ef8;
+}
+.cm-s-default .cm-keyword {
+    color: #e741ff;
+}
+.dark-theme ::-webkit-scrollbar-thumb {
+    background-color: var(--ls-scrollbar-thumb-color) ;
+}
+.cm-s-default .CodeMirror-selected {
+background-color:#ff000087;
+}
+.cm-s-default .CodeMirror-line::selection,
+.cm-s-default .CodeMirror-line > span::selection,
+.cm-s-default .CodeMirror-line > span > span::selection {
+background-color: rgba(105, 36, 36, .5);
+}
+.cm-s-default .CodeMirror-line::-moz-selection,
+.cm-s-default .CodeMirror-line > span::-moz-selection,
+.cm-s-default .CodeMirror-line > span > span::-moz-selection {
+  background-color: rgba(255, 55, 55, 0.5);
+}
+.cm-s-default .CodeMirror-cursor {
+  border-left: solid thin var(--ls-primary-text-color);
+}
+#right-sidebar pre.CodeMirror-line {
+    background: #000;
+}
+.extensions__code-lang {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .25rem;
+    font-size: .7rem;
+    color: #6fe87d;
+    z-index: 1;
+    background: #000;
+}
+iframe {width: 100%;}
+}
