@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Logseq-darker-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.2.7
+@version        0.2.8
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-darker-hpx.user.css
@@ -54,6 +54,12 @@
 }	
 html {
     font-family: Cairo, Inter,sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol!important;
+}
+/* main container width 640 -> 800 px */
+.cp__sidebar-main-content {
+    padding: 3rem 1.5rem;
+    margin: 0 auto;
+    max-width: 800px;
 }
 /* == search == */   
 #search_field {
@@ -213,4 +219,19 @@ iframe {width: 100%;}
     background-color: var(--ls-secondary-background-color);
     border-bottom: 1px solid var(--ls-border-color);
 }
+/* == query block == */
+.custom-query {
+    background-color: var(--ls-secondary-background-color);
+    padding: .5rem .75rem .5rem .75rem;
+    margin: 0 
+   }
+.custom-query .opacity-70::before {
+    content: "Query: ";
+    color: var(--ls-page-inline-code-color);
+    font-size: 85%;
+    opacity: 1 !important;
+    font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    display: inline;
+   }
+.custom-query .opacity-70 {opacity: 1;}
 }
