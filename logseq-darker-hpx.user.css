@@ -229,7 +229,6 @@ iframe {width: 100%;}
     content: "Query: ";
     color: var(--ls-page-inline-code-color);
     font-size: 85%;
-    opacity: 1 !important;
     font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     display: inline;
    }
