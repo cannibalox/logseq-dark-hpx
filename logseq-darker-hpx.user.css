@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Logseq-darker-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.2.8
+@version        0.2.9
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-darker-hpx.user.css
@@ -11,13 +11,13 @@
 .dark-theme {
     --ls-primary-background-color: #1b2122;
     --ls-secondary-background-color: #141819;
-    --ls-tertiary-background-color: #1b1f22;
+    --ls-tertiary-background-color: #242729;
     --ls-block-properties-background-color: #181c1d;
     --ls-search-background-color: #000000;
     --ls-border-color: #323232;
     --ls-menu-hover-color: #1c3444;
     --ls-primary-text-color: #cecece;
-    --ls-secondary-text-color: #b5b5b5;
+    --ls-secondary-text-color: #808080;
     --ls-title-text-color: #72d5fc;
     --ls-link-text-color: #82c4ff;
     --ls-link-text-hover-color: #d973de;
@@ -35,14 +35,16 @@
     --ls-page-blockquote-border-color: var(--ls-secondary-text-color);
     --ls-page-inline-code-color: #f73dc9;
     --ls-page-inline-code-bg-color: #1b191b;
+    --ls-page-title-size:28px;
     --ls-scrollbar-color: #000;
     --ls-scrollbar-thumb-hover-color: #88ee35;
     --ls-scrollbar-thumb-color: #2d475a;
     --ls-head-text-color: var(--ls-link-text-color);
-    --ls-icon-color: var(--ls-link-text-color);
+    --ls-icon-color: #6cec6a;
     --ls-search-icon-color: #74ae48;
     --ls-a-chosen-bg: #172a36;
     --ls-right-sidebar-code-bg-color: #04303c;
+
 }    
 /* == fonts == */
 @font-face {
@@ -135,6 +137,7 @@ mark {
     padding: 0px 0px 0px 3px;
     border: 1px solid;
 }
+    
 /* == codemirror == */
 .CodeMirror {
     font-family: Fira Code, Consolas, monospace;
@@ -222,8 +225,8 @@ iframe {width: 100%;}
 /* == query block == */
 .custom-query {
     background-color: var(--ls-secondary-background-color);
-    padding: .5rem .75rem .5rem .75rem;
-    margin: 0 
+    padding: 0.5rem .75rem 0.5rem .75rem;
+    margin: 0;
    }
 .custom-query .opacity-70::before {
     content: "Query: ";
@@ -233,4 +236,51 @@ iframe {width: 100%;}
     display: inline;
    }
 .custom-query .opacity-70 {opacity: 1;}
+/* == daily query NOW-TODO... exceptions == */
+#today-queries .custom-query {
+    background-color: var(--ls-tertiary-background-color);
+   }
+/*#today-queries .foldable-title .opacity-70 {
+    border-top: 1px solid var(--ls-border-color2);
+    padding-top: 8px;
+    width: 80%;
+    }*/
+#today-queries .custom-query .opacity-70::before {
+    content: "";
+   }
+    
+/* == journals more compact == */
+#journals .journal:first-child {
+    border-top: none;
+    padding: 0px 0 10px 0;
+    min-height: 200px;
+}
+#journals .journal {
+    min-height: 100px;
+    margin: 0px 0 0px 0;
+    border-top: 1px solid var(--ls-block-bullet-border-color);
+    padding: 30px 0 20px 0;
+}
+
+/* === titles=== */
+h1.title {
+    margin-bottom: 0.75rem;
+    color: var(--ls-title-text-color);
+    font-size: var(--ls-page-title-size);
+}
+/* == folding titles bigger arrow == */
+.block-control {
+margin-right:18px; 
+margin-left: 50px;
+margin-top:-0.5rem;
+    }
+.block-control a svg {
+    color: var(--ls-icon-color);
+}
+.block-control .w-4 {
+    width: 1rem;
+}
+.block-control .h-4 {
+    height: 1.6rem;
+} 
 }
