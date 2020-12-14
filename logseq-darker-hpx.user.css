@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Logseq-darker-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.3.3
+@version        0.3.6
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-darker-hpx.user.css
@@ -50,7 +50,7 @@
     --tagpills-border-radius: 4px;
     --accent-bgcolor: #16364a;   
     --marker-switch-bgcolor: #39180deb;
-    --marker-switch-color:#e5547b;
+    --marker-switch-color:#ee4325;
     --marker-switch-opa: 0.7;
 }   
     :root {
@@ -75,7 +75,7 @@
 
 .cp__header {
     height: 2.4rem;
-    background-color: #000000;
+    background-color: var(--ls-primary-background-color);
 }
 /*==================================================*/  
 /* main container width 640 -> var(--main-container-width) */
@@ -99,15 +99,39 @@
 }
 
 /*==================================================*/       
-/* == search == */   
+/* == search deco == */   
 /*==================================================*/ 
+    #search.flex-1 > .flex {
+    width: 700px;
+    background-color: #000;
+    display: block; 
+        height: 70px;
+        margin-top:-20px;
+        left:0%;
+         position: relative;
+        padding-left:10px;
+    }
+    #search.flex-1 > .flex::before {
+        content:"";
+        position: relative;
+         display: inline; 
+        left: 690px;
+    border-bottom: 43px solid #0000;
+       border-right: 20px solid #0000;  
+          border-top: 40px solid #000;
+          border-left: 60px solid #000;
+    }
     
+/*==================================================*/       
+/* == search == */   
+/*==================================================*/     
     #search_field {
         background-color: var(--ls-search-background-color);
         color: var(--ls-secondary-text-color);
         height: 30px;
         padding : 0px 50px;
         margin: 10px -5px;
+        width: 500px;
     }
     .shadow-lg {
         box-shadow: 0 10px 15px -3px rgb(0 0 0 / 35%), 0 4px 6px -2px rgba(0,0,0,.05);
@@ -156,9 +180,8 @@
         flex-shrink: 0;
         height: 1rem;
         width: 1rem;
-        border-color: var(--ls-page-checkbox-border-color) !important;
         background-color: var(--ls-primary-background-color) !important;
-        border-width: 1px;
+        border: 1px solid var(--ls-page-checkbox-border-color) !important;
         border-radius: 20%;
     }
     .marker-switch {
@@ -170,7 +193,7 @@
         width: 1rem;
         height: 1rem;
         opacity: 0.8;
-        padding: 0px 0px 0px 3px;
+        padding: 0px 0px 0px 0px;
         border: 1px solid;
         background-color: var(--marker-switch-bgcolor);
         color: var(--marker-switch-color);
@@ -298,7 +321,7 @@
         padding: 0.5rem .75rem 0.5rem .75rem;
         margin: 0 0px 0 -10px;
        }
-    .custom-query .opacity-70::before {
+    .custom-query .foldable-title .opacity-70::before {
         content: "Query: ";
         color: var(--ls-page-inline-code-color);
         font-size: 85%;
@@ -404,5 +427,10 @@ a.tag[href*="inprogress"] {
 }       
 a.tag[href*="done"] {
   color: #31cfbb;
-}      
+}
+/* DONE */	
+.done {
+  text-decoration:none;
+  opacity: 1;  
+    }
 }
