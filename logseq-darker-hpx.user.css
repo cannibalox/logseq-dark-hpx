@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Logseq-darker-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.3.6
+@version        0.3.7
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-darker-hpx.user.css
@@ -37,8 +37,8 @@
     --ls-page-inline-code-bg-color: #1b191b;
     --ls-page-title-size:28px;
     --ls-scrollbar-color: #000;
-    --ls-scrollbar-thumb-hover-color: #3a5e77;
-    --ls-scrollbar-thumb-color: #2d475a;
+    --ls-scrollbar-thumb-hover-color: #1d5062;
+    --ls-scrollbar-thumb-color: var(--ls-secondary-background-color);
     --ls-head-text-color: var(--ls-link-text-color);
     --ls-icon-color: #6cec6a;
     --ls-search-icon-color: #74ae48;
@@ -101,7 +101,7 @@
 /*==================================================*/       
 /* == search deco == */   
 /*==================================================*/ 
-    #search.flex-1 > .flex {
+/*    #search.flex-1 > .flex {
     width: 700px;
     background-color: #000;
     display: block; 
@@ -121,7 +121,7 @@
           border-top: 40px solid #000;
           border-left: 60px solid #000;
     }
-    
+    */
 /*==================================================*/       
 /* == search == */   
 /*==================================================*/     
@@ -427,10 +427,24 @@ a.tag[href*="inprogress"] {
 }       
 a.tag[href*="done"] {
   color: #31cfbb;
-}
-/* DONE */	
+}     
+/*==================================================*/       
+/* === DONE ====*/ 
+/*==================================================*/ 
 .done {
   text-decoration:none;
   opacity: 1;  
     }
+/*==================================================*/       
+/* === scrollbars ====*/ 
+/*==================================================*/ 
+::-webkit-scrollbar {
+  background-color: black;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #1b2122;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #27353a;
+}
 }
