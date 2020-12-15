@@ -466,8 +466,7 @@ a.tag[href*="inprogress"] {
 }       
 a.tag[href*="done"] {
   color: #31cfbb;
-}   
-}    
+}      
 a.tag[href*="book"]:after {
   content: "📚";
 }  
