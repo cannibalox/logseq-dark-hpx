@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Logseq-darker-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.3.7
+@version        0.3.8
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-darker-hpx.user.css
@@ -184,26 +184,54 @@
         border: 1px solid var(--ls-page-checkbox-border-color) !important;
         border-radius: 20%;
     }
+/*==================================================*/       
+/* === TO DO / DOING marker-switch ===*/
+/*==================================================*/ 
     .marker-switch {
-        font-size: 0.73rem;
+        vertical-align: middle;
         margin: 0px 6px 0px 2px;
         border-radius: 3px;
         font-weight: 700;
-        display: inline-block;
         width: 1rem;
         height: 1rem;
         opacity: 0.8;
-        padding: 0px 0px 0px 0px;
         border: 1px solid;
         background-color: var(--marker-switch-bgcolor);
         color: var(--marker-switch-color);
     }
+
+[title="Change from TODO to DOING"] {
+    background-color: var(--marker-switch-bgcolor);
+    color: var(--marker-switch-color);
+    opacity: 0.8;
+    visibility: visible;
+    display:inline-block;
+    margin: 0 5px 0 20px;
+    padding: 0 0 0 0px;
+    }
+.todo:after {
+    content:"🔥";
+    padding: 0 0px;
+    margin: 1px 0px;
+    position: absolute;
+    left: 22px;  
+    }    
 [title="Change from DOING to TODO"] {
   color: #00ffae;
     background-color: #233346;
     opacity: 0.5;
-}
-    
+    display:inline-block;
+    margin: 0 5px 0 20px;
+    padding: 0 0 0 0px;
+}   
+.doing:after {
+    content:"🚧";
+    display:inline-block;
+    padding: 0 0px;
+    margin: 0 0px;
+    position: absolute;
+    left: 20px;  
+    }   
 /*==================================================*/   
 /* == codemirror code blocks == */
 /*==================================================*/ 
@@ -361,7 +389,9 @@
         width: 766px;
         margin-left: -40px;
     }
-    
+    #journals .title h1:before{
+        content: "📅 ";
+    }
 /*==================================================*/   
 /* === titles headers=== */
 /*==================================================*/   
