@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Logseq-darker-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.3.8
+@version        0.3.9
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-darker-hpx.user.css
@@ -457,7 +457,42 @@ a.tag[href*="inprogress"] {
 }       
 a.tag[href*="done"] {
   color: #31cfbb;
-}     
+}    
+a.tag[href*="book"]:after {
+  content: "📚";
+}  
+a.tag[href*="movie"]:after {
+  content: "🎞";
+}  
+a.tag[href*="soft"]:after {
+  content: "💾";
+}  
+a.tag[href*="tools"]:after {
+  content: "🛠";
+}  
+a.tag[href*="hardware"]:after {
+  content: "💻";
+}  
+a.tag[href*="TV"]:after {
+  content: "📺";
+} 
+a.tag[href*="3d"]:after {
+  content: "💠";
+} 
+a.tag[href*="2d"]:after {
+  content: "🎨";
+}  
+a.tag[href*="science"]:after {
+  content: "🧪";
+}   
+a.tag[href*="boardgame"]:after {
+  content: "🎲";
+}   
+a.tag[href="games"]:after {
+  content: "🕹";
+}          
+    
+/* 🧪⌨🎹🏛🏟❤✔☠🕸🦠👁🧠👨‍👩‍👦‍👦👹👽🛒👘🥊🥋⚽🕹🎧⚙🧱💊⚔💣📱📽📡📷📕📗📄✏🖌📝📆📅📌⏳⏰🍕🍜🚗🚅✈🌍☀🔥💧💤💥☢✴⛔❗⚠♻▶⏸🔴🔵🗨 🎲*/
 /*==================================================*/       
 /* === DONE ====*/ 
 /*==================================================*/ 
