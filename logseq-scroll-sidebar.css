@@ -1,0 +1,22 @@
+/* == adds a scrollbar for the right-sidebar ==*/
+
+.cp__right-sidebar-inner::-webkit-scrollbar {
+  background-color: #000;
+}
+.cp__right-sidebar-inner::-webkit-scrollbar-thumb {
+  background-color: #17171c;
+}
+.cp__right-sidebar-inner::-webkit-scrollbar-thumb:hover {
+  background-color: #2c3235;
+}
+.cp__right-sidebar-inner {  
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 102vh !important;
+    padding-right:10px;
+    padding-top: 24px;
+    margin-bottom: 24px;    
+    margin-right:0px;
+    scrollbar-color:var(--ls-scrollbar-thumb-color);
+    scrollbar-width:auto;   
+}
