@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Logseq-darker-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.4.3
+@version        0.4.4
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-darker-hpx.user.css
@@ -44,6 +44,8 @@
     --ls-search-icon-color: #74ae48;
     --ls-a-chosen-bg: #172a36;
     --ls-right-sidebar-code-bg-color: #04303c;
+    --ls-active-primary-color: #37638a;
+    --ls-active-secondary-color: #5fa2df;
     --tagpills-bg: #202a35;
     --tagpills-text:#5e99c9;
     --tagpills-border: #254f63;
@@ -415,20 +417,25 @@
         padding: 0;
         min-height: 200px;
     }
-    #journals .journal {
+    #journals .journal.page {
         min-height: 100px;
-        margin: 0px 0px 0px 30px;
+        margin: 20px 0px 0px 30px;
         border: 0px solid var(--ls-block-bullet-border-color);
-        padding: 30px 0 20px 0px;
+        padding: 30px 0px 20px 0px;
     }
-    .content .title .title {
+    .journal-item.content .title .title {
         border-bottom: 1px solid var(--ls-title-text-color);
-        width: 766px;
-        margin-left: -40px;
+        width: 800px;
     }
     #journals .title h1:before{
         content: "📅 ";
     }
+    #journals .journal-item {
+    border-top: 0px solid;
+    border-top-color: var(--ls-border-color,#738694);
+    padding: 48px 0;
+    margin: 24px 0 24px 0px;
+}
 /*==================================================*/   
 /* === titles headers=== */
 /*==================================================*/   
@@ -577,4 +584,11 @@ html:not(.is-mac) ::-webkit-scrollbar {
     height: 8px;
     -webkit-border-radius: 0px;
 }
+/*==================================================*/       
+/* === tailwind ====*/ 
+/*==================================================*/    
+    .mr-3 {margin-right: 0px;} /* 0.75rem*/
+    .w-4 {width: 1rem;}
+    .h-5 {height: 1.5rem;}
+    
 }
