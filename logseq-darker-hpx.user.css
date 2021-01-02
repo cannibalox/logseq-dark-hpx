@@ -1,31 +1,82 @@
 /* ==UserStyle==
 @name           Logseq-darker-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.4.4
+@version        0.5.2
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-darker-hpx.user.css
 ==/UserStyle== */
 
 @-moz-document domain("logseq.com") {
-.dark-theme {
-    --ls-primary-background-color: #262b2c; 
-    --ls-secondary-background-color: #141819;
-    --ls-tertiary-background-color: #212426;
-    --ls-block-properties-background-color: #181c1d;
-    --ls-search-background-color: #000000;
-    --ls-border-color: #323232;
-    --ls-menu-hover-color: #1c3444;
-    --ls-primary-text-color: #cecece;
-    --ls-secondary-text-color: #808080;
-    --ls-title-text-color: #72d5fc;
-    --ls-link-text-color: #82c4ff;
-    --ls-link-text-hover-color: #d973de;
+.white-theme, html[data-theme=light] {
+    --ls-primary-background-color: white;
+    --ls-secondary-background-color: #f3f7f8;
+    --ls-tertiary-background-color: #dbffd6;
+    --ls-quaternary-background-color: #e1f0fe;
+    --ls-table-tr-even-background-color: #f4f5f7;
+    --ls-active-primary-color: #045591;
+    --ls-active-secondary-color: #003761;
+    --ls-block-properties-background-color: var(--ls-tertiary-background-color);
+    --ls-search-background-color: var(--ls-primary-background-color);
+    --ls-border-color: #ccc;
+    --ls-guideline-color: var(--ls-border-color);
+    --ls-menu-hover-color: var(--ls-a-chosen-bg);
+    --ls-primary-text-color: #171717;
+    --ls-secondary-text-color: #161e2e;
+    --ls-title-text-color: #222;
+    --ls-link-text-color: var(--ls-active-primary-color);
+    --ls-link-text-hover-color: var(--ls-active-secondary-color);
     --ls-link-ref-text-color: var(--ls-link-text-color);
     --ls-link-ref-text-hover-color: var(--ls-link-text-hover-color);
     --ls-tag-text-color: var(--ls-link-text-color);
     --ls-tag-text-hover-color: var(--ls-link-text-hover-color);
-    --ls-block-bullet-border-color: #4a95e0;
+    --ls-slide-background-color: #fff;
+    --ls-block-bullet-border-color: #00b3ff;
+    --ls-block-bullet-color: #394b59;
+    --ls-block-highlight-color: #c0e6fd;
+    --ls-selection-background-color: #e4f2ff;
+    --ls-page-checkbox-color: var(--ls-active-primary-color);
+    --ls-page-checkbox-border-color: #8c8c8c;
+    --ls-page-blockquote-color: var(--ls-primary-text-color);
+    --ls-page-blockquote-bg-color: transparent;
+    --ls-page-blockquote-border-color: var(--ls-active-primary-color);
+    --ls-page-inline-code-bg-color: var(--ls-secondary-background-color);
+    --ls-page-inline-code-color: var(--ls-primary-text-color);
+    --ls-scrollbar-foreground-color: rgba(0, 0, 0, 0.1);
+    --ls-scrollbar-background-color: rgba(0, 0, 0, 0.05);
+    --ls-scrollbar-thumb-hover-color: rgba(0, 0, 0, 0.2);
+    --ls-head-text-color: var(--ls-link-text-color);
+    --ls-icon-color: #6b7280;
+    --ls-search-icon-color: var(--ls-icon-color);
+    --ls-a-chosen-bg: #f4f5f7;
+    --ls-right-sidebar-code-bg-color: var(--ls-secondary-background-color);
+    --color-level-1: var(--ls-secondary-background-color);
+    --color-level-2: var(--ls-tertiary-background-color);
+    --color-level-3: var(--ls-quaternary-background-color);
+    --color-level-4: #d0e6fa;
+    --color-level-5: #bbdaf6;
+	--ls-block-ref-link-text-color:#dc3d85;
+	--admo-text-important: red;
+	--admo-bg-important: black;
+}
+.dark-theme {
+    --ls-primary-background-color: #1f2324; 
+    --ls-secondary-background-color: #141819;
+    --ls-tertiary-background-color: rgb(33, 36, 38);
+    --ls-block-properties-background-color: #111415c2;
+    --ls-search-background-color: #000000;
+    --ls-border-color: #323232;
+    --ls-menu-hover-color: #1c3444;
+    --ls-primary-text-color: #cecece;
+    --ls-secondary-text-color: #c7c7c7;
+    --ls-title-text-color: #72d5fc;
+    --ls-link-text-color: #82c4ff;
+    --ls-link-text-hover-color: #d973de;
+    --ls-link-ref-text-color: #66b6eb;
+    --ls-link-ref-text-hover-color: var(--ls-link-text-hover-color);
+    --ls-tag-text-color: var(--ls-link-text-color);
+    --ls-tag-text-hover-color: var(--ls-link-text-hover-color);
+    --ls-block-bullet-border-color: #57a3dad9;
     --ls-block-bullet-color: #477ba8;
     --ls-block-highlight-color: #202e3a;
     --ls-page-checkbox-color: #4e7c9a;
@@ -61,9 +112,34 @@
     --datepicker-available-hovercolor:#86f571;
     --datepicker-available-hoverbgcolor: #192731;
     --text-accent: #6fe87d;
+    --text-hightlight: #f64933;
+    --inverted-text: #262626;
+    --highlight-light: #0b0a0bf0;
+	--ls-block-ref-link-text-color:#74ced8;
+	--admo-text-important: red;
+	--admo-bg-important: #171717;
+  --background: #282a36;
+  --light-background: #343746;
+  --lighter-background: #424450;
+  --dark-background: #21222c;
+  --darker-background: #191a21;
+  --foreground: #f8f8f2;
+  --current-line: #44475a;
+  --comment: #6272a4;
+  --white: var(--foreground);
+  --red: #ff5555;
+  --orange: #ffb86c;
+  --yellow: #f1fa8c;
+  --green: #50fa7b;
+  --purple: #bd93f9;
+  --purple-hover: #bf93f988;
+  --cyan: #8be9fd;
+  --cyan-hover: #8be9fd88;
+  --pink: #e2bf83;
+  --pink-hover: #ff79c688;
 }   
     :root {
-        --main-container-width: 900px;
+        --main-container-width: 840px;
     }
 /*==================================================*/    
 /* == fonts == */
@@ -174,6 +250,11 @@
     .shadow-lg {
         box-shadow: 0 10px 15px -3px rgb(0 0 0 / 35%), 0 4px 6px -2px rgba(0,0,0,.05);
     }
+    
+/*==================================================*/       
+/* == MAIN == */   
+/*==================================================*/ 
+    
     a.menu-link {
         background-color: var(--ls-secondary-background-color);
         color: var(--ls-link-text-hover-color)
@@ -187,26 +268,43 @@
         font-weight: bold;
     }
     a {color: var(--text-accent);} 
+    
+    .bg-base-3 {
+        background-color: var(--ls-secondary-background-color);
+    }
+    
+/*==================================================*/       
+/* === highlighted text (mark) ==*/
+/*==================================================*/   
+     mark {
+        background: var(--text-accent);
+        color: var(--inverted-text);
+        padding: 0 4px;
+        border-radius: 5px;
+        font-weight: 700;
+    } 
+    
+    #ui__ac mark {
+        background:var(--highlight-light);
+        color: var(--text-hightlight);
+        padding: 0 0px;
+        border-radius: 3px;
+        font-weight: 700;
+        text-decoration: underline;
+    } 
+/*==================================================*/       
+/* === bullets ===*/
+/*==================================================*/ 
     .bullet-container .bullet {
         border-radius: 50%;
         width: 5px;
         height: 5px;
         background-color: var(--ls-block-bullet-color);
         }
-    .bg-base-3 {
-        background-color: var(--ls-secondary-background-color);
+    .bullet-container.bullet-closed {
+        background-color: #f2f2ef00;
+        border: 1px solid var(--ls-block-bullet-border-color);
     }
-    .bullet-closed {
-        background-color: #23486600;
-        border: 1px solid #57a3dad9;
-    }
-    mark {
-        background: var(--text-accent);
-        color: #262626;
-        padding: 0 4px;
-        border-radius: 5px;
-    } 
-
 /*==================================================*/       
 /* === checkboxes ===*/
 /*==================================================*/ 
@@ -256,9 +354,9 @@
     left: 22px;  
     }    
 [title="Change from DOING to TODO"] {
-  color: #00ffae;
-    background-color: #233346;
-    opacity: 0.5;
+    color: var(--text-accent);
+    background-color: var(--marker-switch-bgcolor);
+    opacity: 0.8;
     display:inline-block;
     margin: 0 5px 0 20px;
     padding: 0 0 0 0px;
@@ -277,8 +375,7 @@
     .CodeMirror {
         font-family: Fira Code, Consolas, monospace;
         font-size : 12px;
-        color: #4a95e0;
-        direction: ltr;
+        color: #efefef;
     }
 
     .CodeMirror-gutter, .CodeMirror-gutters, .CodeMirror-linenumber, .CodeMirror-scroll, .CodeMirror-sizer {
@@ -298,49 +395,112 @@
         color: #919191;
         white-space: nowrap;
     }
-    .CodeMirror pre.CodeMirror-line, .CodeMirror pre.CodeMirror-line-like {   
-        color:#9c9c9c;
-        }
-    .cm-s-default .cm-string {
-        color: #f8cc1c;
-    }  
-    .cm-s-default .cm-atom {
-        color: #48ee89;
-    }
-    .cm-s-default .cm-builtin {
-        color: #a37ef8;
-    }
-    .cm-s-default .cm-keyword {
-        color: #e741ff;
-    }
-    .dark-theme ::-webkit-scrollbar-thumb {
-        background-color: var(--ls-scrollbar-thumb-color) ;
-    }
-    .cm-s-default .CodeMirror-selected {
-    background-color:#ff000087;
-    }
-    .cm-s-default .CodeMirror-line::selection,
-    .cm-s-default .CodeMirror-line > span::selection,
-    .cm-s-default .CodeMirror-line > span > span::selection {
-    background-color: rgba(105, 36, 36, .5);
-    }
-    .cm-s-default .CodeMirror-line::-moz-selection,
-    .cm-s-default .CodeMirror-line > span::-moz-selection,
-    .cm-s-default .CodeMirror-line > span > span::-moz-selection {
-      background-color: rgba(255, 55, 55, 0.5);
-    }
-    .cm-s-default .CodeMirror-cursor {
-      border-left: solid thin var(--ls-primary-text-color);
-    }
+    
+    /*=====*/
+    
+    
+ .extensions__code-lang {
+  background: var(--light-background);
+}
+
+.cm-s-default .CodeMirror-gutters {
+  color: var(--background);
+}
+.cm-s-default .CodeMirror-cursor {
+  border-left: solid thin var(--white);
+}
+.cm-s-default .CodeMirror-linenumber {
+  color: var(--comment);
+}
+.cm-s-default .CodeMirror-selected {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cm-s-default .CodeMirror-line {
+  box-shadow: none;
+}
+
+.cm-s-default .CodeMirror-line::selection,
+.cm-s-default .CodeMirror-line > span::selection,
+.cm-s-default .CodeMirror-line > span > span::selection {
+  background: rgba(255, 255, 255, 0.1);
+}
+.cm-s-default .CodeMirror-line::-moz-selection,
+.cm-s-default .CodeMirror-line > span::-moz-selection,
+.cm-s-default .CodeMirror-line > span > span::-moz-selection {
+  background: rgba(255, 255, 255, 0.1);
+}
+.cm-s-default span.cm-comment {
+  color: var(--comment);
+}
+.cm-s-default span.cm-string,
+.cm-s-default span.cm-string-2 {
+  color: var(--yellow);
+}
+.cm-s-default span.cm-number {
+  color: var(--purle);
+}
+.cm-s-default span.cm-variable {
+  color: var(--green);
+}
+.cm-s-default span.cm-variable-2 {
+  color: var(--white);
+}
+.cm-s-default span.cm-def {
+  color: var(--green);
+}
+.cm-s-default span.cm-operator {
+  color: var(--pink);
+}
+.cm-s-default span.cm-keyword {
+  color: var(--pink);
+}
+.cm-s-default span.cm-atom {
+  color: var(--purple);
+}
+.cm-s-default span.cm-meta {
+  color: var(--white);
+}
+.cm-s-default span.cm-tag {
+  color: var(--pink);
+}
+.cm-s-default span.cm-attribute {
+  color: var(--green);
+}
+.cm-s-default span.cm-qualifier {
+  color: var(--green);
+}
+.cm-s-default span.cm-property {
+  color: var(--cyan);
+}
+.cm-s-default span.cm-builtin {
+  color: var(--green);
+}
+.cm-s-default span.cm-variable-3,
+.cm-s-default span.cm-type {
+  color: var(--orange);
+}
+
+.cm-s-default .CodeMirror-activeline-background {
+  background: rgba(255, 255, 255, 0.1);
+}
+.cm-s-default .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: var(--white) !important;
+}
+
+    /*=====*/
+    
     #right-sidebar pre.CodeMirror-line {
         background: #000;
     }
     .extensions__code-lang {
         position: absolute;
-        top: 6px;
+        top: -6px;
         right: 0;
-        padding: 0 .25rem;
-        font-size: .7rem;
+        padding: 0px .25rem;
+		margin: 0px 0;
+        font-size: .6rem;
         color: #6fe87d;
         z-index: 1;
         background: #000000ad;
@@ -349,7 +509,7 @@
     position: relative;
     z-index: 0;
     max-width: calc(var(--main-container-width) - 50px); /* TEMP */
-    overflow: auto;
+    overflow: auto;  
     }   
 
     
@@ -388,7 +548,7 @@
         padding: 0.5rem .75rem 0.5rem .75rem;
         margin: 0 0px 0 -10px;
        }
-    .custom-query .foldable-title .opacity-70::before {
+    .block-body .custom-query .foldable-title .opacity-70::before {
         content: "Query: ";
         color: var(--ls-page-inline-code-color);
         font-size: 85%;
@@ -425,7 +585,7 @@
     }
     .journal-item.content .title .title {
         border-bottom: 1px solid var(--ls-title-text-color);
-        width: 800px;
+        width: calc(var(--main-container-width) - 95px);
     }
     #journals .title h1:before{
         content: "📅 ";
@@ -441,7 +601,7 @@
 /*==================================================*/   
     h1 {margin:0em 0 0.5em 0 !important; text-align: center; color:#5ebaed}
     h2 {text-decoration: none;}
-    h3 {margin:0  !important;}
+    h3 {margin:0  ;}
     h4 {margin:0 0 15px 0  !important;}
     
     h1.title {
@@ -453,6 +613,14 @@
         text-align: left;
     }
 
+	.ls-block h2 {
+		font-size: 1.5em;
+		margin: 0.4em 0 0.25em 0;
+	}
+	.ls-block h3 {
+    font-size: 1.17em;
+    margin: .8em 0 0.25rem 0;
+}
 /*==================================================*/   
 /* == folding titles : bigger arrow == */
 /*==================================================*/   
@@ -532,8 +700,11 @@ a.tag[href*="science"]:after {
 a.tag[href*="boardgame"]:after {
   content: "🎲";
 }   
-a.tag[href="games"]:after {
+a.tag[href="#games"]:after {
   content: "🕹";
+}          
+a.tag[href*="audio"]:after {
+  content: "🎹";
 }          
 
 /* 🧪⌨🎹🏛🏟❤✔☠🕸🦠👁🧠👨‍👩‍👦‍👦👹👽🛒👘🥊🥋⚽🕹🎧⚙🧱💊⚔💣📱📽📡📷📕📗📄✏🖌📝📆📅📌⏳⏰🍕🍜🚗🚅✈🌍☀🔥💧💤💥☢✴⛔❗⚠♻▶⏸🔴🔵🗨 🎲*/
@@ -573,7 +744,7 @@ html:not(.is-mac) ::-webkit-scrollbar {
   background-color: black;
 }
 html:not(.is-mac) ::-webkit-scrollbar-thumb {
-  background-color: #1b2122;
+  background-color: #354b4e;
   -webkit-border-radius: 0px !important;  
 }
 html:not(.is-mac) ::-webkit-scrollbar-thumb:hover {
@@ -581,8 +752,15 @@ html:not(.is-mac) ::-webkit-scrollbar-thumb:hover {
 }
 html:not(.is-mac) ::-webkit-scrollbar {
     width: 14px;
-    height: 8px;
+    height: 12px;
     -webkit-border-radius: 0px;
+}
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar {
+    position: absolute;
+    z-index: 6;
+    display: none;
+    outline: 0;
+    cursor: auto;
 }
 /*==================================================*/       
 /* === tailwind ====*/ 
@@ -590,5 +768,75 @@ html:not(.is-mac) ::-webkit-scrollbar {
     .mr-3 {margin-right: 0px;} /* 0.75rem*/
     .w-4 {width: 1rem;}
     .h-5 {height: 1.5rem;}
-    
+/*==================================================*/       
+/* === external links ====*/ 
+/*==================================================*/
+    a.external-link {border-bottom: 0px;}
+    a.external-link:after {
+        display:inline-block;
+        content:"";
+        width: 21px;
+        height:16px;
+        background: 
+            transparent
+            50% 200%/54% 
+            url('https://svgshare.com/i/SWJ.svg') no-repeat;        
+        filter: invert(3%) sepia(100%) saturate(1920%) hue-rotate(0deg) brightness(1419%) contrast(249%);
+    }
+/*==================================================*/       
+/* === page refs====*/ 
+/*==================================================*/
+.page-reference.nested .page-ref {
+    font-family: Cairo;  
 }
+.page-reference .text-gray-500 {
+		opacity:0.6;
+	}
+/*==================================================*/       
+/* == block properties == */
+/*==================================================*/ 
+    .blocks-properties {
+        opacity:1;
+        background-color: var(--ls-block-properties-background-color);
+    }
+    .blocks-properties .my-1 b{
+        font-weight: 500;
+        color:var(--text-accent)
+    }
+/*==================================================*/       
+/* == block ref == */
+/*==================================================*/ 
+.block-ref {
+    color: var(--ls-block-ref-link-text-color);
+    padding-bottom: 0px;
+    border-bottom: -0px solid;
+    border-bottom-color: var(--ls-block-ref-link-text-color);
+    cursor: alias;
+    text-decoration: underline;
+    text-decoration-thickness: 0.05em;
+    text-underline-offset: 0.1em; 
+}
+.cp__right-sidebar-inner .block-ref {
+	color: var(--ls-block-ref-link-text-color);
+    text-decoration: none;
+}
+/*==================================================*/       
+/* == admonition block == */
+/*==================================================*/ 	
+.admonitionblock {
+    margin: 0rem 0;
+	padding: 1rem 1rem;
+	background-color: var(--admo-bg-important)
+}
+.important .text-lg {
+    font-size: 1rem;
+    line-height: 1.75rem;
+	color: var(--admo-text-important);
+}
+
+/*==================================================*/
+.left {float:left; margin: 20px 20px 20px 0px;}
+.right {float:right; margin: 20px 0px 20px 20px;}
+	
+}
+
