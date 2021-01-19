@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Logseq-darker-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.5.6
+@version        0.5.7
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-darker-hpx.user.css
@@ -60,9 +60,9 @@
 	--admo-bg-important: black;
 }
 .dark-theme {
-    --ls-primary-background-color: #1f2324; 
-    --ls-secondary-background-color: #141819;
-    --ls-tertiary-background-color: rgb(33, 36, 38);
+    --ls-primary-background-color: #222; 
+    --ls-secondary-background-color: rgb(22, 22, 22);
+    --ls-tertiary-background-color: rgb(38, 39, 41);
     --ls-block-properties-background-color: #111415c2;
     --ls-search-background-color: #000000;
     --ls-border-color: #323232;
@@ -131,7 +131,7 @@
   --orange: #dd7f3c;
   --yellow: #ffea62;
   --green: #71e48e;
-  --purple: #96afd9;
+  --purple: #77c1ec;
   --purple-hover: #bf93f988;
   --cyan: #8be9fd;
   --cyan-hover: #8be9fd88;
@@ -154,6 +154,7 @@
     html {
         font-family: Cairo, Inter,sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol!important;
     }
+	
 /*==================================================*/  
 /* header                                           */
 /*==================================================*/  
@@ -852,8 +853,34 @@ html:not(.is-mac) ::-webkit-scrollbar {
 }
 
 /*==================================================*/
+/*===== change look of image resize handle =========*/
+/*==================================================*/
+.ls-block img {
+    box-shadow: none;
+}
+.resize	{
+    border: 1px solid black ;
+}
+.resize::after {
+    pointer-events: none;
+    content: "⇲"; /* unicode ⇲ 21F2; ↔ 2194 ; ↕ 2195 ; */
+	font-size: 14px;
+	font-family: arial;
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    text-align: center;
+    bottom: 8px;
+    right: 4px;
+    background-color: rgb(32, 32, 32);
+    color: #fff;
+	z-index:10;
+}	
+	
+/*==================================================*/
 .left {float:left; margin: 20px 20px 20px 0px;}
 .right {float:right; margin: 20px 0px 20px 20px;}
-	
+
+
 }
 
