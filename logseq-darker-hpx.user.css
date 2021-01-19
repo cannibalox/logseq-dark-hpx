@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Logseq-darker-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.5.4
+@version        0.5.6
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-darker-hpx.user.css
@@ -125,17 +125,17 @@
   --darker-background: #191a21;
   --foreground: #f8f8f2;
   --current-line: #44475a;
-  --comment: #6272a4;
+  --comment: #777;
   --white: var(--foreground);
   --red: #ff5555;
-  --orange: #ffb86c;
-  --yellow: #f1fa8c;
-  --green: #50fa7b;
-  --purple: #bd93f9;
+  --orange: #dd7f3c;
+  --yellow: #ffea62;
+  --green: #71e48e;
+  --purple: #96afd9;
   --purple-hover: #bf93f988;
   --cyan: #8be9fd;
   --cyan-hover: #8be9fd88;
-  --pink: #e2bf83;
+  --pink: #ea8dcc;
   --pink-hover: #ff79c688;
 }   
     :root {
