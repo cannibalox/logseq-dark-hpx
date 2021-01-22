@@ -1,0 +1,39 @@
+/*==================================================*/     
+/* === dirty focus mode ====*/ 
+/*==================================================*/
+
+:root {
+    --dfm-unfocused-opacity: 0.5;
+    --dfm-darktheme-editing-color:hsl(115, 85%, 74%);
+    --dfm-darktheme-parent-block-color: hsl(73, 71%, 74%);
+    --dfm-whitetheme-editing-color: hsl(221, 100%, 60%);
+    --dfm-whitetheme-parent-block-color: hsl(207, 91%, 67%);
+}
+.dark-theme {
+    --dfm-editing-color:hsl(115, 85%, 74%);
+    --dfm-parent-block-color: hsl(73, 71%, 74%);
+}
+.white-theme {
+    --dfm-editing-color:hsl(212, 85%, 55%);
+    --dfm-parent-block-color: hsl(201, 88%, 65%);
+}
+.cp__sidebar-main-content .ls-block{
+    opacity: var(--dfm-unfocused-opacity);
+    filter:grayscale(50%)
+    }
+.cp__sidebar-main-content .ls-block:hover{
+    opacity: 1;
+    filter: grayscale(0%)
+    }
+.block-editor{
+    opacity:1;
+    filter: contrast(1) grayscale(0%);
+    color:var(--dfm-editing-color);
+    }
+.ls-block:focus-within{
+    opacity:1;
+    filter: grayscale(0%);
+    color:var(--dfm-parent-block-color);
+    }
+ 
+
