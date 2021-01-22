@@ -1,0 +1,27 @@
+/* ==== colorful indent levels ===*/
+.block-children {
+	border-left: 0px solid;
+}
+.block-children [level="3"] {
+	border-left: 1px solid;
+	border-left-color: #ff00005c;}
+.block-children [level="4"] {
+	border-left: 1px solid;
+	border-left-color: #ec87225e;}
+.block-children [level="5"] {
+	border-left: 1px solid;
+	border-left-color: #ffff0052;}
+.block-children [level="6"] {
+	border-left: 1px solid;
+	border-left-color: #65d95b7a;}
+.block-children [level="7"] {
+	border-left: 1px solid;
+	border-left-color: #2ca0df5e;}
+.block-children [level="8"] {
+	border-left: 1px solid;
+	border-left-color: #9f8af061;}
+.block-children [level="9"] {
+	border-left: 1px solid;
+	border-left-color: #f15bf74f;}
+/* ==== fix spacing - TWEAK VALUES ! ===*/
+.ls-block { margin:-2px 0px -2px -1px !important; padding: 4px 1px !important;} 
