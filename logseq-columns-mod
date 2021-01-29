@@ -1,0 +1,39 @@
+/* -- columns layout ---*/
+div[level="2"]{
+	display:inline-block;
+	width: 300px; /* card width */
+	position:absolute;
+	top: 50px;
+	vertical-align: top;
+	margin-bottom: 20px;
+}
+
+ /* set global width */
+:root {--main-container-width : 1600px}
+.cp__sidebar-main-content {
+        padding: 3rem 1.5rem;
+        margin: 0 auto;
+        max-width: var(--main-container-width);
+    }
+.foldable-title {
+    max-width: var(--main-container-width);
+    }   
+
+ /* tweak layout margins */
+.blocks-container,.doc-mode {
+    margin-left: -16px;
+    margin-top: -40px;
+}
+
+/* -- cards look ---*/
+.block-children .ls-block {
+	border: 0px solid var(--ls-secondary-text-color);
+	margin: -10px 0px;
+}
+.ls-block {
+	background-color: #2a2e30;
+	margin: 1px 8px 0px -2px;
+	padding: 10px 8px 10px 0px;
+	border: 1px solid black;
+	border-radius: 10px;
+}
