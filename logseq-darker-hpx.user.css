@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name           Logseq-darker-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.5.8
+@version        0.5.9
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-darker-hpx.user.css
 ==/UserStyle== */
-
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&family=Barlow:wght@400;700;900&display=swap');
 @-moz-document domain("logseq.com") {
 .white-theme, html[data-theme=light] {
     --ls-primary-background-color: white;
@@ -116,7 +116,7 @@
     --inverted-text: #262626;
     --highlight-light: #0b0a0bf0;
 	--ls-block-ref-link-text-color:#74ced8;
-	--admo-text-important: red;
+	--admo-text-important: #fa4320;
 	--admo-bg-important: #171717;
   --background: #282a36;
   --light-background: #343746;
@@ -144,14 +144,7 @@
 /*==================================================*/    
 /* == fonts == */
 /*==================================================*/ 
-    @font-face {
-      font-family: 'Cairo';
-      font-style: normal;
-      font-weight: 400;
-      src: local('Cairo Regular'), local('Cairo-Regular'), url(https://fonts.gstatic.com/s/cairo/v7/SLXGc1nY6HkvalIhTps.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }	
-    html {
+	html {
         font-family: Cairo, Inter,sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol!important;
     }
 	
@@ -604,9 +597,15 @@
     .journal-item.content .title .title {
         border-bottom: 1px solid var(--ls-title-text-color);
         width: calc(var(--main-container-width) - 95px);
+		font-size: 38px;
+		font-family: Teko;
+		font-weight: 600;
+		color: var(--ls-primary-text-color);
     }
     #journals .title h1:before{
         content: "📅 ";
+		font-size: 24px;
+		vertical-align:top; 
     }
     #journals .journal-item {
     border-top: 0px solid;
@@ -632,8 +631,10 @@
     }
 
 	.ls-block h2 {
-		font-size: 1.5em;
-		margin: 0.4em 0 0.25em 0;
+		font-size: 1.6em !important;
+		margin: 0.5em 0 0em 0;
+		font-family: Barlow;
+		font-weight: 700;
 	}
 	.ls-block h3 {
     font-size: 1.17em;
@@ -842,7 +843,7 @@ html:not(.is-mac) ::-webkit-scrollbar {
 /* == admonition block == */
 /*==================================================*/ 	
 .admonitionblock {
-    margin: 0rem 0;
+    margin: 0.75rem 0 0 0;
 	padding: 1rem 1rem;
 	background-color: var(--admo-bg-important)
 }
@@ -855,15 +856,15 @@ html:not(.is-mac) ::-webkit-scrollbar {
 /*==================================================*/
 /*===== change look of image resize handle =========*/
 /*==================================================*/
-.ls-block img {
+/* .ls-block img {
     box-shadow: none;
 }
-.resize	{
-    border: 1px solid black ;
+.resize:hover	{
+    border: 1px dotted #18aeab ;
 }
 .resize::after {
     pointer-events: none;
-    content: "⇲"; /* unicode ⇲ 21F2; ↔ 2194 ; ↕ 2195 ; */
+    content: "⇲";
 	font-size: 14px;
 	font-family: arial;
     position: absolute;
@@ -875,8 +876,17 @@ html:not(.is-mac) ::-webkit-scrollbar {
     background-color: rgb(32, 32, 32);
     color: #fff;
 	z-index:10;
-}	
-	
+}	 */
+/*==================================================*/
+/*===== unordered lists =========*/
+/*==================================================*/
+ul {
+	list-style-type: square;
+	margin-top: 10px;
+	}
+ul li::marker {	
+	font-size: 10px;
+	}
 /*==================================================*/
 .left {float:left; margin: 20px 20px 20px 0px;}
 .right {float:right; margin: 20px 0px 20px 20px;}
