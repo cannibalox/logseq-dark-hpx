@@ -3,7 +3,7 @@
 - the *.user.css work with [Stylus](https://github.com/openstyles/stylus) extension for Chrome/FF/Opera
 - the *.css snippets can be used with stylus or directly added to your custom.css
 
-## logseq-darker-hpx.user.css : 
+## logseq-darker-hpx.user.css : [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://github.com/cannibalox/logseq-dark-hpx/raw/master/logseq-darker-hpx.user.css)
 a dark theme for logseq with some extra features :
 - external links have an icon
 - journal pages : titles with icon
