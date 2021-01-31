@@ -23,7 +23,7 @@ a dark theme for logseq with some extra features :
 
 ## utilities
 
--
+- logseq-colorful-indents.css : 
 
 ## (deprecated) dark-hpx version : [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://github.com/cannibalox/logseq-dark-hpx/raw/master/logseq-dark-hpx.user.css)
 
