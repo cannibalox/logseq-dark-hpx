@@ -1,7 +1,7 @@
 # CSS snippets for www.logeq.com:
 
-the *.user.css work with [Stylus](https://github.com/openstyles/stylus) extension for Chrome/FF/Opera
-the *.css snippets can be used with stylus or directly added to your custom.css
+- the *.user.css work with [Stylus](https://github.com/openstyles/stylus) extension for Chrome/FF/Opera
+- the *.css snippets can be used with stylus or directly added to your custom.css
 
 ## logseq-darker-hpx.user.css : 
 a dark theme for logseq with some extra features :
@@ -20,6 +20,10 @@ a dark theme for logseq with some extra features :
 - scheduled timestands with Consolas monospace font
 - restyled scrollbars
 - less space around admonition blocks
+
+## utilities
+
+-
 
 ## (deprecated) dark-hpx version : [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://github.com/cannibalox/logseq-dark-hpx/raw/master/logseq-dark-hpx.user.css)
 
