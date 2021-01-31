@@ -598,7 +598,7 @@
         border-bottom: 1px solid var(--ls-title-text-color);
         width: calc(var(--main-container-width) - 95px);
 		font-size: 38px;
-		font-family: Teko;
+		font-family: Barlow;
 		font-weight: 600;
 		color: var(--ls-primary-text-color);
     }
