@@ -40,7 +40,7 @@ a kanban/columns/cards layout. USE WITH STYLUS to enable it only when needed
 ## logseq-iconify-external-links.css 
 add a small icon near external links (aklready included in the theme)
 ## logseq-scroll-sidebar.css 
-restore the scrollbar on the right sidebar in addition to the main container sscrollbar, makes it easier to navigate with pen-based systems without scrollwheels
+restore the scrollbar on the right sidebar in addition to the main container scrollbar, makes it easier to navigate with pen-based systems without scroll wheels
 ## logseq-dirty-focus-mode.css
 fade out all lines except the current line. the parent block will be highlighted. useful for long documents with multiples levels. USE WITH STYLUS to be able to enable/disable it easily. I wouldn't activate that all the time.
 
