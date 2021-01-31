@@ -1,39 +1,58 @@
-/* -- columns layout ---*/
-div[level="2"]{
-	display:inline-block;
-	width: 300px; /* card width */
-	position:absolute;
-	top: 50px;
-	vertical-align: top;
-	margin-bottom: 20px;
-}
+/* columns view css mod by cannibalox v0.2  20210131 */
+/* SETTINGS: adjust width of the page and cards below*/
 
- /* set global width */
-:root {--main-container-width : 1600px}
-.cp__sidebar-main-content {
-        padding: 3rem 1.5rem;
-        margin: 0 auto;
-        max-width: var(--main-container-width);
-    }
-.foldable-title {
-    max-width: var(--main-container-width);
-    }   
+	:root {
+		--main-container-width : 1800px; 
+		--mod-cards-width: 252px;
+		}  
 
- /* tweak layout margins */
+/* ============================= */
+/* ==== columns view layout ==== */
+/* ====================-======== */
+
+	.cp__sidebar-main-content {
+			padding: 2rem 1.5rem;
+			margin: 0;
+			max-width: var(--main-container-width);
+		}
+	.foldable-title {
+		max-width: var(--main-container-width);
+		}   
+	div[level="2"]{
+		display:inline-block;
+		width: var(--mod-cards-width); 
+		position:absolute;
+		top: 10px;
+		vertical-align: top;
+		margin-bottom: 20px;
+	}
+	.embed-block .ls-block {
+		display: inline;
+	}
+
+/* ============================== */
+/* === tweak layout margins  ==== */
+	
 .blocks-container,.doc-mode {
-    margin-left: -16px;
-    margin-top: -40px;
-}
+		margin: 0px 0;
+	}
 
-/* -- cards look ---*/
-.block-children .ls-block {
-	border: 0px solid var(--ls-secondary-text-color);
-	margin: -10px 0px;
-}
-.ls-block {
-	background-color: #2a2e30;
-	margin: 1px 8px 0px -2px;
-	padding: 10px 8px 10px 0px;
-	border: 1px solid black;
-	border-radius: 10px;
-}
+/* ============================== */
+/* ======== cards look ========== */
+	
+div[level="2"]{
+		box-shadow: 2px 2px 3px #0000003b;
+		border: 1px solid black;
+		border-radius: 6px;
+		background-color: var(--ls-tertiary-background-color);
+		margin: 0px 15px 15px 0px; /* SPACE BETWEEN CARDS */
+		padding: 1em 0.5em;  /* CARDS BOARDER */
+	}
+	.block-children .ls-block {
+		border: 0px solid var(--ls-secondary-text-color);
+		margin: 0px;
+	}
+	.ls-block {
+		margin: 0px 12px 0px -2px;
+		padding: 5px 8px 0px 0px;
+	}
