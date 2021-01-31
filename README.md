@@ -1,7 +1,7 @@
-# CSS snippets for www.logseq.com:
+# CSS snippets and themes for www.logseq.com:
 
 - the *.user.css work with [Stylus](https://github.com/openstyles/stylus) extension for Chrome/FF/Opera
-- the *.css snippets can be used with stylus or directly added to your custom.css
+- the *.css snippets can be used with stylus (recommended) or directly added to your custom.css
 
 ## logseq-darker-hpx.user.css : [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://github.com/cannibalox/logseq-dark-hpx/raw/master/logseq-darker-hpx.user.css)
 a dark theme for logseq with some extra features :
@@ -21,13 +21,15 @@ a dark theme for logseq with some extra features :
 - restyled scrollbars
 - less space around admonition blocks
 
+to install inside a custom.css without stylus :
+```
+> remove the line `@-moz-document domain("logseq.com") {`
+> remove the last `}` at the very end of the file
+```
+
 logseq darker hpx
 ![image](https://user-images.githubusercontent.com/4605693/106374143-a7604500-6380-11eb-888c-069bbb0d8848.png)
 ![Maxthon_WmZncUNvJr](https://user-images.githubusercontent.com/4605693/106373755-0cb23700-637d-11eb-85fd-98b5b9c2eeeb.png)
-
-
-# utilities
-CSS snippets that can be used with or without the theme. add them your custom.css or use Stylus extension (recommended method)
 
 ## logseq-colorful-indents.css 
 colorize the indentation lines
