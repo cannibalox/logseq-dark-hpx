@@ -1,0 +1,14 @@
+/* === sidebar mod by cannibalox === */
+
+/* set sidebar width */
+:root { --right-sidebar-width: 840px}
+
+/* move sidebar to the left */
+.cp__right-sidebar {
+left: 10px ;
+right:auto;
+width: var(--right-sidebar-width) !important;
+}
+.cp__sidebar-layout.is-right-sidebar-open{
+left: calc(var(--right-sidebar-width) - 200px);
+}
