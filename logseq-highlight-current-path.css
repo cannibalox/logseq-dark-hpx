@@ -1,0 +1,11 @@
+/*==================================================*/     
+/* === highlight current path by cannnibalox v0.1 ===*/ 
+/*==================================================*/
+
+.ls-block .bullet{
+    background-color:#dd0707;
+}
+
+.ls-block:not(:focus-within) > div:first-child .bullet{
+    background-color:var(--ls-block-bullet-color);
+}
