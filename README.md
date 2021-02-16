@@ -43,7 +43,7 @@ add a small icon near external links (aklready included in the theme)
 restore the scrollbar on the right sidebar in addition to the main container scrollbar, makes it easier to navigate with pen-based systems without scroll wheels
 ## logseq-highlight-current-path.css
 highlight the bullets of the current path
-![image](https://user-images.githubusercontent.com/4605693/108088552-e4168680-7078-11eb-9bfa-08d814b567fe.png)
+![MOPlO5raYZ](https://user-images.githubusercontent.com/4605693/108089216-a403d380-7079-11eb-9d41-04ba9da3613e.gif)
 ## logseq-dirty-focus-mode.css
 fade out all lines except the current line. the parent block will be highlighted. useful for long documents with multiples levels. USE WITH STYLUS to be able to enable/disable it easily. I wouldn't activate that all the time.
 
