@@ -41,6 +41,9 @@ a kanban/columns/cards layout. USE WITH STYLUS to enable it only when needed
 add a small icon near external links (aklready included in the theme)
 ## logseq-scroll-sidebar.css 
 restore the scrollbar on the right sidebar in addition to the main container scrollbar, makes it easier to navigate with pen-based systems without scroll wheels
+## logseq-highlight-current-path.css
+highlight the bullets of the current path
+![image](https://user-images.githubusercontent.com/4605693/108088552-e4168680-7078-11eb-9bfa-08d814b567fe.png)
 ## logseq-dirty-focus-mode.css
 fade out all lines except the current line. the parent block will be highlighted. useful for long documents with multiples levels. USE WITH STYLUS to be able to enable/disable it easily. I wouldn't activate that all the time.
 
