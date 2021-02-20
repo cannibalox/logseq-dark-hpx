@@ -1,5 +1,12 @@
 /* WIP 20210218 prettify td mode */
 
+/*#main-content-container .doc-mode .ls-block[level="2"]:not(.pre-block) > div:not(.block-children) {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1em;
+	margin: 20px 0;
+}*/
+
 /* == hide top level bullets but show on hover === */
 #main-content-container	.doc-mode div[level="2"] > div > div > a .bullet-container .bullet {
 	   visibility: hidden;
@@ -15,7 +22,10 @@
 #main-content-container .doc-mode div[level="2"]  {
 	margin: 1em 0 1.3em 0;
 }
-#main-content-container .doc-mode div[level="2"]:not(.pre-block) > .flex-1.flex-row .block-content, div[level="2"]:not(.pre-block) > .flex-1.flex-row .editor-wrapper textarea {
+#main-content-container .doc-mode div[level="2"]:not(.pre-block) 
+	> .flex-1.flex-row .block-content,
+.doc-mode div[level="2"]:not(.pre-block) 
+	> .flex-1.flex-row .editor-wrapper textarea {
 			font-family: Barlow;
 			font-weight: 600;
 			font-size: 24px;
@@ -27,13 +37,15 @@
 	border-left: 1px solid var(--ls-guideline-color);
 }
 
-div[id="journals"] div[level="2"] > .flex-1.flex-row {
+div[id="journals"] div[level="2"] 
+> .flex-1.flex-row {
 			font-family: Cairo;
 			font-weight: 400;
 			font-size: 14px;
 	} 
 /* === hides first indentation line ===*/
-#main-content-container .doc-mode div[level="2"] > .block-children {
+#main-content-container .doc-mode div[level="2"] 
+> .block-children {
 		border-left : 0px; }  
 
 /* === hide top bullet in embed-block ===*/
