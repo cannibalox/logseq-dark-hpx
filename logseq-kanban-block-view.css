@@ -1,0 +1,44 @@
+/* css kanban block view for child blocks by cannibalox v20210220 */
+/* use: inline tag #kanban, #kanban-small or #kanban-wXXX    */
+/* try:  #kanban-w200,#kanban-w300, #kanban-w400             */
+
+div[data-refs-self*="kanban"] > .block-children {
+	display: inline-flex;
+	position: relative;
+	overflow-x: auto;
+	overflow-y: hidden;
+	margin: 10px;
+	}
+div[data-refs-self*="kanban"] >.block-children > div {
+	display: inline-block;
+	width: 400px;
+	padding-right: 3px;
+	}
+
+/* #kanbansmall : smaller font with hover zoom */
+div[data-refs-self*="kanban-small"] > .block-children .block-content {
+	font-size: 11px;
+	font-weight: 300;
+}
+div[data-refs-self*="kanban-small"] > .block-children .block-content:hover {
+	font-size: 14px !important;
+	min-width: 100px;
+	margin: 0 10px;
+}
+/* #kanban-w[100-300] : force width of the columns */
+div[data-refs-self*="kanban-w100"] > .block-children .block-content {
+	width:100px;
+}
+div[data-refs-self*="kanban-w200"] > .block-children .block-content {
+	width:200px;
+}
+div[data-refs-self*="kanban-w300"] > .block-children .block-content {
+	width:300px;
+}
+div[data-refs-self*="kanban-w300"] > .block-children {
+	border: 1px solid var(--ls-block-bullet-border-color);
+	padding: 10px 0;
+}
+div[data-refs-self*="kanban-w400"] > .block-children .block-content {
+	width:380px;
+}
