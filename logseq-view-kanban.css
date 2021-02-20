@@ -1,0 +1,68 @@
+/* columns view css mod by cannibalox v0.2  20210131 */
+/* SETTINGS: adjust width of the page and cards below*/
+
+	:root {
+		--kanban-container-width : 800px; 
+		--max-cards-per-row: 5;
+		--mod-cards-width: calc((var(--kanban-container-width) - 15%) / var(--max-cards-per-row));
+		}  
+
+/* ============================= */
+/* ==== columns view layout ==== */
+/* ====================-======== */
+/*.cp__sidebar-main-content {max-width: var(--kanban-container-width)}*/
+div[data-refs*="v-kanban"] .page-blocks-inner{
+			padding: 2rem 1.5rem;
+			margin: 0;
+			max-width: var(--kanban-container-width);
+		}
+/*div[data-page-tags*="v-kanban"] .foldable-title{
+		max-width: var(--kanban-container-width);
+		}   */
+div[data-refs*="v-kanban"] .block-children {display: flex;}
+div[data-refs*="v-kanban"] >.block-children > .ls-block {
+		display: inline-block;
+/*		 flex: 1 1 0;*/
+		width: var(--mod-cards-width); 
+		position:relative;
+		vertical-align: top;
+		margin-bottom: 20px;
+	}
+div[data-refs*="v-kanban"] .embed-block .ls-block {
+		display: inline;
+	}
+
+/* ============================== */
+/* === tweak layout margins  ==== */
+	
+div[data-refs*="v-kanban"] .blocks-container,.doc-mode {
+		margin: 0px 0;
+	}
+
+/* ============================== */
+/* ======== cards look ========== */
+/*
+div[data-refs*="v-kanban"] div[level="2"]{
+		box-shadow: 2px 2px 3px #0000003b;
+		border: 1px solid black;
+		border-radius: 6px;
+		background-color: var(--ls-tertiary-background-color);
+		margin: 0px 15px 15px 0px; 
+		padding: 1em 0.5em; 
+	}
+div[data-refs*="v-kanban"] .block-children .ls-block {
+		border: 0px solid var(--ls-secondary-text-color);
+		margin: 0px;
+	}
+div[data-refs*="v-kanban"] .ls-block {
+		margin: 0px 12px 0px -2px;
+		padding: 5px 8px 0px 0px;
+	}*/
+/* ======== don't style references ========== */
+.cp__sidebar-main-content .references {max-width: var(--main-container-width);}
+div[data-refs*="v-kanban"] .references div[level="2"]{
+		box-shadow: initial;
+		border:initial;
+		background-color: initial;
+	}
+

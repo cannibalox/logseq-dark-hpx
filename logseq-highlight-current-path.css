@@ -1,6 +1,6 @@
-/*==================================================*/     
-/*=== highlight current path by cannnibalox v0.2 ===*/ 
-/*====== option: (:hover) to (:focus-whithin) ======*/
+/*===================================================*/     
+/*= highlight current path by cannnibalox v20210220 =*/ 
+/*====== option: (:hover) to (:focus-whithin) =======*/
 
 .ls-block .bullet{
     background-color:#dd0707;
@@ -12,16 +12,17 @@
 
 /*--- highlight indentation line - remove if not useful ---*/
 /*---- tweak left: and top: offset to match yout theme ----*/
-.blocks-container > div:not(:first-child) .ls-block:focus-within > div:first-child .bullet:before{
+.blocks-container > div:not(:first-child) .ls-block:hover > div:first-child .bullet:before{
     content : "└─";
-	color:#461c1c;
+	color:#6e2222;
 	display: inline-block;
-	left: -24px;
-	top: -6px;
+	left: -20px;
+	top: -10px;
 	width: 30px;
 	position: relative;
 }
-.ls-block > .block-children:focus-within {
-	border-left-color:#461c1c;
+.ls-block > .block-children:hover {
+	border-left-color:#6e2222;
+	border-left-width: 2px;
 }
 

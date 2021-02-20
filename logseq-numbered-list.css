@@ -1,0 +1,37 @@
+/* numbered lists 0.2 20210220 */
+/* usage : tag parent block with #numlist */
+
+.ls-block[data-refs-self*="numlist"]
+    > .block-children
+	> .ls-block {
+          counter-increment: lvlNumber;
+		  }
+.ls-block[data-refs-self*="numlist"] 
+ > .block-children 
+ > .ls-block div .bullet-container:before {
+         content: counters(lvlNumber, ".") ".";
+         position: absolute;
+         left: 4px;
+		 top: -10px;
+		 display: block;
+		 margin: 10px;
+		 padding: 00px;
+}
+/* hide bullets */
+	.ls-block[data-refs-self*="numlist"] 
+	 > .block-children 
+	 > .ls-block 
+	 > .block-children div .bullet-container:before {
+		content: "";
+	}
+	.ls-block[data-refs-self*="numlist"] 
+	 > .block-children 
+	 > .ls-block div .bullet {
+		visibility: hidden;
+	}
+	.ls-block[data-refs-self*="numlist"] 
+	 > .block-children 
+	 > .ls-block 
+	 > .block-children div .bullet {
+		visibility: visible;
+	}

@@ -1,0 +1,56 @@
+/* == hide top level bullets but show on hover === */
+#main-content-container	[data-page-tags*="v-doc"] div[level="2"] > div > div > a .bullet-container .bullet {
+	   visibility: hidden;
+	} 
+#main-content-container	[data-page-tags*="v-doc"] div[level="2"]:hover > div > div > a .bullet-container .bullet {
+	   visibility: visible;
+	} 
+
+
+	/* === auto headify top level bullets ===*/
+#main-content-container [data-page-tags*="v-doc"] div[level="2"]  {
+	margin: 1em 0 1.3em 0;
+}
+#main-content-container [data-page-tags*="v-doc"] div[level="2"] > .flex-1.flex-row .block-content, div[level="2"]:not(.pre-block) > .flex-1.flex-row .editor-wrapper textarea {
+			font-family: Barlow;
+			font-weight: 600;
+			font-size: 24px;
+			margin: -0.3em 0 0.3em 0em;
+			text-transform: uppercase; /* capitalize */
+	} 
+
+	div[id="journals"] div[level="2"] > .flex-1.flex-row {
+			font-family: Cairo;
+			font-weight: 400;
+			font-size: 14px;
+	} 
+	/* === hides first indent line ===*/
+#main-content-container [data-page-tags*="v-doc"] div[level="2"] > .block-children {
+		border-left : 0px; }  
+
+/* === restyle properties ===*/
+	.properties{
+			font-family: Cairo;
+			font-weight: 300;
+			font-size: 14px;
+			text-transform: none;
+}
+
+/* === hide top bullet in embed-block ===*/
+	.embed-block .flex-1.flex-row {
+		margin-left: -15px; }  /* tweak value to move the top bullet */
+	.embed-block .block-children {
+		border-left : 0px; }  /* hide the first indentation line */
+	.embed-block .flex-1.flex-row .bullet-container.cursor .bullet {
+		background-color: transparent} /* embled-block top bullet */
+	.embed-block .block-children .flex-1.flex-row .bullet-container.cursor .bullet {
+		background-color: var(--ls-block-bullet-color)} /* embled-block children bullets */
+
+
+/* === hide top bullet in embed-block ===*/
+#main-content-container [data-page-tags*="v-doc"] div[level="2"] > .flex-1.flex-row hr {
+		margin: 0px 0px 0px -4px;
+}
+#main-content-container [data-page-tags*="v-doc"] div[level="2"] > .flex-1.flex-row .table-wrapper{
+		margin: -20px 0px 0px -4px;
+}

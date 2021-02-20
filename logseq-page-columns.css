@@ -1,0 +1,104 @@
+/* ======================================================== */
+/* PAGE VIEW MOD : CARDS - css by cannibalox v0.3 20210220  */
+/* usage: add 'tags: #p-cards` inside the front matter      */
+/* optional: `#p-cards.c2` to `#p-cards.c6` to set the      */ 
+/* number of cards (.c2 = 2 cards, .c3 = 3 cards, etc...)   */
+/* ======================================================== */
+/* SETTINGS: adjust width of the page and cards below       */
+
+:root {
+	--cards-container-width : 98vw; /* sets the width of the page */
+	--max-cards-per-row: 5; /* default to 5 cards if nothing is specified */
+	--mod-cards-width: calc((var(--cards-container-width) - 15%) / var(--max-cards-per-row));
+}
+
+	/* ============================= */
+	/* ==== columns view layout ==== */
+	/* ====================-======== */
+	.cp__sidebar-main-content-container {
+		display: flex;  
+		justify-content:start;
+	} 
+
+	[data-page-tags*="p-cards"] .page-blocks-inner{
+		padding: 2rem 1.5rem;
+		margin: 0 00px;
+		width: var(--cards-container-width);
+	}
+
+	[data-page-tags*="p-cards"] div[level="2"]:not(.pre-block) {
+		display: inline-block;
+		width: var(--mod-cards-width);
+		position:absolute;
+		top: 10px;
+		vertical-align: top;
+		margin-bottom: 20px;
+	}
+
+	/* define cards size with .cX*/
+	[data-page-tags*="p-cards.c2"] div[level="2"]:not(.pre-block) {
+		width: calc((var(--cards-container-width) - 15%) / 2);
+	}
+	[data-page-tags*="p-cards.c3"] div[level="2"]:not(.pre-block) {
+		width: calc((var(--cards-container-width) - 15%) / 3);
+	}
+	[data-page-tags*="p-cards.c4"] div[level="2"]:not(.pre-block) {
+		width: calc((var(--cards-container-width) - 15%) / 4);
+	}
+	[data-page-tags*="p-cards.c5"]  div[level="2"]:not(.pre-block) {
+		width: calc((var(--cards-container-width) - 15%) / 5);
+	}
+	[data-page-tags*="p-cards.c6"]  div[level="2"]:not(.pre-block) {
+		width: calc((var(--cards-container-width) - 10%) / 6);
+	}
+
+	[data-page-tags*="p-cards"] .embed-block .ls-block {
+		display: inline;
+	}
+	div[data-page-tags*="p-cards"] .custom-query {
+		width: calc(var(--mod-cards-width) - calc(240px / var(--max-cards-per-row)));
+	}
+	div[data-page-tags*="p-cards"] .custom-query .flex.flex-col{
+		width: calc(var(--mod-cards-width) - 130px);
+	}
+
+	/* === tweak layout margins  ==== */
+		
+	div[data-page-tags*="p-cards"] .blocks-container,.doc-mode {
+		margin: 0px 0;
+	}
+
+	/* ============================== */
+	/* ======== cards look ========== */
+	/* ============================== */
+		div[data-page-tags*="p-cards"] div[level="2"]:not(.pre-block) {
+			box-shadow: 2px 2px 3px #0000003b;
+			border: 1px solid black;
+			border-radius: 6px;
+			background-color: var(--ls-tertiary-background-color);
+			margin: 0px 15px 15px 0px; /* SPACE BETWEEN CARDS */
+			padding: 1em 0.5em;  /* CARDS BOARDER */
+		}
+		div[data-page-tags*="p-cards"] .block-children .ls-block {
+			border: 0px solid var(--ls-secondary-text-color);
+			margin: 0px;
+		}
+		div[data-page-tags*="p-cards"] .ls-block {
+			margin: 0px 12px 0px -2px;
+			padding: 5px 8px 0px 0px;
+		}
+	/* ======== don't style references ========== */
+		.cp__sidebar-main-content .references {
+			max-width: var(--main-container-width);
+		}
+		div[data-page-tags*="p-cards"] .references div[level="2"]{
+			box-shadow: initial;
+			border:initial;
+			background-color: initial;
+		}
+	/* ======== fix properties block width ======== */
+	.block-content .pre-block.bg-base-2 {
+		width: fit-content;
+		padding-right:0.75em;
+	}
+/*============ end of view pages as cards mod ================================*/

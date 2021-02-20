@@ -1,0 +1,49 @@
+/* WIP 20210218 prettify td mode */
+
+/* == hide top level bullets but show on hover === */
+#main-content-container	.doc-mode div[level="2"] > div > div > a .bullet-container .bullet {
+	   visibility: hidden;
+	} 
+#main-content-container	.doc-mode div[level="2"]:hover > div > div > a .bullet-container .bullet {
+	   visibility: visible;
+	} 
+.doc-mode .hide-inner-bullet .bullet {
+    display: initial
+}
+
+/* === auto headify top level bullets ===*/
+#main-content-container .doc-mode div[level="2"]  {
+	margin: 1em 0 1.3em 0;
+}
+#main-content-container .doc-mode div[level="2"]:not(.pre-block) > .flex-1.flex-row .block-content, div[level="2"]:not(.pre-block) > .flex-1.flex-row .editor-wrapper textarea {
+			font-family: Barlow;
+			font-weight: 600;
+			font-size: 24px;
+			text-transform: uppercase; /* capitalize */
+			margin: 0em 0em;
+	} 
+.doc-mode .block-children {
+	margin-left: 20px !important;
+	border-left: 1px solid var(--ls-guideline-color);
+}
+
+div[id="journals"] div[level="2"] > .flex-1.flex-row {
+			font-family: Cairo;
+			font-weight: 400;
+			font-size: 14px;
+	} 
+/* === hides first indentation line ===*/
+#main-content-container .doc-mode div[level="2"] > .block-children {
+		border-left : 0px; }  
+
+/* === hide top bullet in embed-block ===*/
+	.embed-block .flex-1.flex-row {
+		margin-left: -15px; }  /* tweak value to move the top bullet */
+	.embed-block .block-children {
+		border-left : 0px; }  /* hide the first indentation line */
+	.embed-block .flex-1.flex-row .bullet-container.cursor .bullet {
+		background-color: transparent} /* embled-block top bullet */
+	.embed-block .block-children .flex-1.flex-row .bullet-container.cursor .bullet {
+		background-color: var(--ls-block-bullet-color)} /* embled-block children bullets */
+
+
