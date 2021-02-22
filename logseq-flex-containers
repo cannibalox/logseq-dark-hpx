@@ -1,0 +1,33 @@
+/* flex containers v0.1 20210222 by cannibalox */
+
+.cp__sidebar-layout.is-right-sidebar-open {
+	min-height: 40vh;
+	height:100vh;
+}
+.cp__sidebar-layout.is-right-sidebar-open .cp__sidebar-main-layout {
+    margin-right: 0%;
+	height:96vh;
+	overflow:hidden;
+}
+
+cp__sidebar-main-layout {
+	height: 90vh;
+	overflow:hidden;
+}
+.cp__right-sidebar.is-open {
+	resize: horizontal;
+	overflow-y:scroll;
+	height: 89vh;
+	flex: 1 1 auto;
+	display:flex;
+	position: relative;
+	top: 40px;
+}
+.cp__sidebar-main-content-container {
+	resize: horizontal;
+	overflow:auto;
+	display:flex;
+	flex: 1 1 auto;
+	height: 89vh;
+	top: 40px;
+	}
