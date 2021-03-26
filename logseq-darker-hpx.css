@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Logseq-darker-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.5.9
+@version        0.6.5
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-darker-hpx.user.css
@@ -9,25 +9,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&family=Barlow:wght@400;700;900&display=swap');
 .white-theme, html[data-theme=light] {
     --ls-primary-background-color: white;
-    --ls-secondary-background-color: #f3f7f8;
-    --ls-tertiary-background-color: #dbffd6;
-    --ls-quaternary-background-color: #e1f0fe;
-    --ls-table-tr-even-background-color: #f4f5f7;
-    --ls-active-primary-color: #045591;
-    --ls-active-secondary-color: #003761;
-    --ls-block-properties-background-color: var(--ls-tertiary-background-color);
-    --ls-search-background-color: var(--ls-primary-background-color);
-    --ls-border-color: #ccc;
+    --ls-secondary-background-color: rgb(248, 248, 248);
+    --ls-tertiary-background-color: rgb(244, 244, 244);
+    --ls-quaternary-background-color: #e5efa0;
+    --ls-table-tr-even-background-color: #fff;
+    --ls-active-primary-color: #029cf8;
+    --ls-active-secondary-color: #08c8ba;
+    --ls-block-properties-background-color:#ff7d7d;
+    --ls-search-background-color: #e4e4e4;
+    --ls-border-color: #98cdef;
     --ls-guideline-color: var(--ls-border-color);
-    --ls-menu-hover-color: var(--ls-a-chosen-bg);
-    --ls-primary-text-color: #171717;
+    --ls-menu-hover-color: #def5b2;
+    --ls-primary-text-color: #4c4c4c;
     --ls-secondary-text-color: #161e2e;
-    --ls-title-text-color: #222;
+    --ls-title-text-color: #0b8fe6;
     --ls-link-text-color: var(--ls-active-primary-color);
-    --ls-link-text-hover-color: var(--ls-active-secondary-color);
+    --ls-link-text-hover-color: #8d30ff;
     --ls-link-ref-text-color: var(--ls-link-text-color);
     --ls-link-ref-text-hover-color: var(--ls-link-text-hover-color);
-    --ls-tag-text-color: var(--ls-link-text-color);
+    --ls-tag-text-color: #ff0006;
     --ls-tag-text-hover-color: var(--ls-link-text-hover-color);
     --ls-slide-background-color: #fff;
     --ls-block-bullet-border-color: #00b3ff;
@@ -39,13 +39,13 @@
     --ls-page-blockquote-color: var(--ls-primary-text-color);
     --ls-page-blockquote-bg-color: transparent;
     --ls-page-blockquote-border-color: var(--ls-active-primary-color);
-    --ls-page-inline-code-bg-color: var(--ls-secondary-background-color);
-    --ls-page-inline-code-color: var(--ls-primary-text-color);
-    --ls-scrollbar-foreground-color: rgba(0, 0, 0, 0.1);
+    --ls-page-inline-code-bg-color: #ecf1f2;
+    --ls-page-inline-code-color: #ff14b1;
+    --ls-scrollbar-foreground-color: rgba(253, 253, 253, .1);
     --ls-scrollbar-background-color: rgba(0, 0, 0, 0.05);
-    --ls-scrollbar-thumb-hover-color: rgba(0, 0, 0, 0.2);
+    --ls-scrollbar-thumb-hover-color: rgba(255, 59, 59, .2);
     --ls-head-text-color: var(--ls-link-text-color);
-    --ls-icon-color: #6b7280;
+    --ls-icon-color: #1b85ff;
     --ls-search-icon-color: var(--ls-icon-color);
     --ls-a-chosen-bg: #f4f5f7;
     --ls-right-sidebar-code-bg-color: var(--ls-secondary-background-color);
@@ -54,9 +54,14 @@
     --color-level-3: var(--ls-quaternary-background-color);
     --color-level-4: #d0e6fa;
     --color-level-5: #bbdaf6;
-	--ls-block-ref-link-text-color:#dc3d85;
+	--ls-block-ref-link-text-color:#865df4;
 	--admo-text-important: red;
 	--admo-bg-important: black;
+	--tagpills-bg: #0db6ff;
+    --tagpills-text:#fff;
+    --tagpills-border: rgba(37, 79, 99, 0);
+    --tagpills-border-radius: 4px;
+	--logo-fill: #007bff;
 }
 .dark-theme {
     --ls-primary-background-color: #222; 
@@ -125,28 +130,32 @@
   --foreground: #f8f8f2;
   --current-line: #44475a;
   --comment: #777;
-  --white: var(--foreground);
-  --red: #ff5555;
-  --orange: #dd7f3c;
-  --yellow: #ffea62;
-  --green: #71e48e;
-  --purple: #77c1ec;
+  --white: #fff;
+  --red: #f55;
+  --orange: #f89f47;
+  --yellow: #e9ad5f;
+  --green: #8fd876;
+  --purple: #519fea;
   --purple-hover: #bf93f988;
-  --cyan: #8be9fd;
+  --cyan: #71c0e4;
   --cyan-hover: #8be9fd88;
-  --pink: #ea8dcc;
+  --pink: #d4d4d4;
   --pink-hover: #ff79c688;
+  --logo-fill: #7de799;
 }   
-    :root {
-        --main-container-width: 840px;
-    }
+	
+	:root {--ls-main-content-max-width: 800px}
 /*==================================================*/    
 /* == fonts == */
 /*==================================================*/ 
 	html {
-        font-family: Cairo, Inter,sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol!important;
+        font-family: Barlow, Inter,sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol!important;
     }
-	
+/*==================================================*/ 
+	html .white-theme {
+        font-family: barlow;
+		font-size: 15px !important;
+	}
 /*==================================================*/  
 /* header                                           */
 /*==================================================*/  
@@ -155,17 +164,19 @@
     height: 2.4rem;
     background-color: var(--ls-primary-background-color);
 }
-/*==================================================*/  
-/* main container width 640 -> var(--main-container-width) */
-/*==================================================*/  
-    .cp__sidebar-main-content {
-        padding: 3rem 1.5rem;
-        margin: 0 auto;
-        max-width: var(--main-container-width);
-    }
-    .foldable-title {
-    max-width: var(--main-container-width);
-    }   
+	
+/* logo                                           */	
+.cp__header-logo svg {fill : var(--logo-fill);}
+.cp__header-logo .svg-shadow {
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, .7));
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, .5));
+}
+	
+a svg {
+    color: var(--ls-icon-color);
+}
+
+
 /*==================================================*/       
 /* == right sidebar == */
 /*==================================================*/ 
@@ -190,21 +201,19 @@
 /* == blocks margin and 900 px width == */
 /*==================================================*/ 
 
-.ls-block {
+/* .ls-block {
     margin: 0.4em 0 0 0;
-    padding: 0;
-    max-width: var(--main-container-width); /* wider main container */
-}
+    padding: 0 0 1rem;
+} */
 /*==================================================*/       
-/* == blocks children tree line == */
+/* == blocks children tree line realign== */
 /*==================================================*/ 
 
 .block-children {
     border-left: 1px solid;
     border-left-color: var(--ls-guideline-color,#ddd);
-    left: -5px;
-    position: relative;
-    }
+    margin-left: 1.05rem !important; 
+	}
 /*==================================================*/       
 /* == search deco == */   
 /*==================================================*/ 
@@ -313,6 +322,9 @@
         border: 1px solid var(--ls-page-checkbox-border-color) !important;
         border-radius: 20%;
     }
+	.form-checkbox:checked {
+		background-color: var(--ls-page-checkbox-border-color)   !important;
+	}
 /*==================================================*/       
 /* === TO DO / DOING marker-switch ===*/
 /*==================================================*/ 
@@ -342,9 +354,10 @@
 .todo:after {
     content:"🔥";
     padding: 0 0px;
-    margin: 1px 0px;
+    margin: 0px;
     position: absolute;
-    left: 22px;  
+    left: 20px;
+	top: 0px;
     }    
 [title="Change from DOING to TODO"] {
     color: var(--text-accent);
@@ -427,7 +440,7 @@
     .extensions__code {
     position: relative;
     z-index: 0;
-    max-width: calc(var(--main-container-width) - 50px); /* TEMP */
+    max-width: calc(var(--ls-main-content-max-width) - 50px); /* TEMP */
     overflow: auto;  
     }   
     /*=====*/
@@ -526,9 +539,15 @@
 /*==================================================*/   
 /* == inline code == */
 /*==================================================*/ 
-    code, kbd, pre, samp {
+/*     code, kbd, pre, samp {
     font-family: Fira Code, Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     font-variant-ligatures: normal;
+} */
+:not(pre)>code {
+    border-radius: 3px;
+    font-size: .8rem;
+    font-family: JetBrainsMono NF, Meslo, MonoLisa,"Fira Code",Monaco,Menlo,Consolas,"COURIER NEW",monospace;
+    padding: 3px 5px!important;
 }
 /*==================================================*/   
 /* == iframes / yt embeds == */
@@ -555,18 +574,25 @@
     
     .custom-query {
         background-color: var(--ls-secondary-background-color);
-        padding: 0.5rem .75rem 0.5rem .75rem;
+        padding: 0.2rem .5rem 0.2rem .5rem;
         margin: 0 0px 0 -10px;
        }
-    .block-body .custom-query .foldable-title .opacity-70::before {
-        content: "Query: ";
-        color: var(--ls-page-inline-code-color);
-        font-size: 85%;
-        font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-        display: inline;
-       }
-    .custom-query .opacity-70 {opacity: 1;}
-    
+/* 	.custom-query .p-1::before {
+        content: "";
+		color: var(--ls-page-inline-code-color);
+		font-size: 85%;
+        font-family: MesloLGS NF,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+          } */
+    .custom-query .opacity-70 {
+		opacity: 1;
+	}
+	
+	.custom-query .p-1 {
+		font-size: .65em;
+		font-family: JetBrainsMono NF, Meslo LG L for Powerline, Menlo, "Fira Code",Monaco,Consolas,"COURIER NEW",monospace;
+		margin-left:-10px;
+		background: none;
+}
 /*==================================================*/   
 /* == daily query NOW-TODO (...) exceptions == */
 /*==================================================*/   
@@ -586,31 +612,34 @@
         border-top: none;
         padding: 0;
         min-height: 200px;
+
     }
     #journals .journal.page {
         min-height: 100px;
-        margin: 20px 0px 0px 30px;
+        margin: 0px;
         border: 0px solid var(--ls-block-bullet-border-color);
-        padding: 30px 0px 20px 0px;
+        padding: 0px;
+		
     }
     .journal-item.content .title .title {
         border-bottom: 1px solid var(--ls-title-text-color);
-        width: calc(var(--main-container-width) - 95px);
+        width: calc(var(--ls-main-content-max-width) - 160px);
 		font-size: 38px;
 		font-family: Barlow;
 		font-weight: 600;
 		color: var(--ls-primary-text-color);
-    }
+	    }
     #journals .title h1:before{
         content: "📅 ";
 		font-size: 24px;
 		vertical-align:top; 
-    }
+	    }
     #journals .journal-item {
     border-top: 0px solid;
     border-top-color: var(--ls-border-color,#738694);
     padding: 48px 0;
-    margin: 24px 0 24px 0px;
+    margin: 0px 0 20px 0px;
+	background: none;
 }
 /*==================================================*/   
 /* === titles headers=== */
@@ -661,71 +690,88 @@
 /* === tags ====*/ 
 /*==================================================*/   
 
-a.tag {
-    opacity: 1;
-	color: var(--tagpills-text);
-    background-color: var(--tagpills-bg);
-    border: 1px solid var(--tagpills-border);
-    font-size: 13px;
-    padding: 0px 6px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    border-radius: var(--tagpills-border-radius);
-}
-.tag:hover {
-    color: white !important;
-    background-color: var(--accent-bgcolor);
-}
-a.tag[href*="important"] {
-  color: #fd3434;
-  border-color: #fb3030;
-}    
-a.tag[href*="inprogress"] {
-  color: #adf752;
-}       
-a.tag[href*="done"] {
-  color: #31cfbb;
-}      
-a.tag[href*="book"]:after {
-  content: "📚";
-}  
-a.tag[href*="movie"]:after {
-  content: "🎞";
-}  
-a.tag[href*="soft"]:after {
-  content: "💾";
-}  
-a.tag[href*="tools"]:after {
-  content: "🛠";
-}  
-a.tag[href*="hardware"]:after {
-  content: "💻";
-}  
-a.tag[href*="TV"]:after {
-  content: "📺";
-} 
-a.tag[href*="3d"]:after {
-  content: "💠";
-} 
-a.tag[href*="2d"]:after {
-  content: "🎨";
-}  
-a.tag[href*="science"]:after {
-  content: "🧪";
-}   
-a.tag[href*="boardgame"]:after {
-  content: "🎲";
-}   
-a.tag[href="#games"]:after {
-  content: "🕹";
-}          
-a.tag[href*="audio"]:after {
-  content: "🎹";
-}          
+	a.tag {
+		opacity: 1;
+		color: var(--tagpills-text);
+		background-color: var(--tagpills-bg);
+		border: 1px solid var(--tagpills-border);
+		font-size: 13px;
+		padding: 0px 6px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		cursor: pointer;
+		border-radius: var(--tagpills-border-radius);
+	}
+	.tag:hover {
+		color: white !important;
+		background-color: var(--accent-bgcolor);
+	}
+	a.tag[href*="important"] {
+	  color: #fd3434;
+	  border-color: #fb3030;
+	}    
+	a.tag[href*="inprogress"] {
+	  color: #adf752;
+	}       
+	a.tag[href*="done"] {
+	  color: #31cfbb;
+	}      
+	a.tag[href*="book"]:after {
+	  content: "📚";
+	}  
+	a.tag[href*="movie"]:after {
+	  content: "🎞";
+	}  
+	a.tag[href*="soft"]:after {
+	  content: "💾";
+	}  
+	a.tag[href*="tools"]:after {
+	  content: "🛠";
+	}  
+	a.tag[href*="hardware"]:after {
+	  content: "💻";
+	}  
+	a.tag[href*="TV"]:after {
+	  content: "📺";
+	} 
+	a.tag[href*="3d"]:after {
+	  content: "💠";
+	} 
+	a.tag[href*="2d"]:after {
+	  content: "🎨";
+	}  
+	a.tag[href*="science"]:after {
+	  content: "🧪";
+	}   
+	a.tag[href*="boardgame"]:after {
+	  content: "🎲";
+	}   
+	a.tag[href="#games"]:after {
+	  content: "🕹";
+	}          
+	a.tag[href*="audio"]:after {
+	  content: "🎧";
+	}          
+	a.tag[href*="travel"]:after {
+	  content: "✈";
+	}     
+	a.tag[href*="2buy"]:after {
+	  content: "🛒";
+	} 
+	a.tag[href*="health"]:after {
+	  content: "💊";
+	} 
+	a.tag[href*="photo"]:after {
+	  content: "📷";
+	} 
+	a.tag[href*="food"]:after {
+	  content: "🥗";
+	} 
+	a.tag[href*="cloth"]:after {
+	  content: "👕";
+	} 
 
-/* 🧪⌨🎹🏛🏟❤✔☠🕸🦠👁🧠👨‍👩‍👦‍👦👹👽🛒👘🥊🥋⚽🕹🎧⚙🧱💊⚔💣📱📽📡📷📕📗📄✏🖌📝📆📅📌⏳⏰🍕🍜🚗🚅✈🌍☀🔥💧💤💥☢✴⛔❗⚠♻▶⏸🔴🔵🗨 🎲*/
 /*==================================================*/       
 /* === DONE ====*/ 
 /*==================================================*/ 
@@ -780,12 +826,7 @@ html:not(.is-mac) ::-webkit-scrollbar {
     outline: 0;
     cursor: auto;
 }
-/*==================================================*/       
-/* === tailwind ====*/ 
-/*==================================================*/    
-    .mr-3 {margin-right: 0px;} /* 0.75rem*/
-    .w-4 {width: 1rem;}
-    .h-5 {height: 1.5rem;}
+
 /*==================================================*/       
 /* === external links ====*/ 
 /*==================================================*/
@@ -809,6 +850,10 @@ html:not(.is-mac) ::-webkit-scrollbar {
 }
 .page-reference .text-gray-500 {
 		opacity:0.6;
+	}
+.white-theme .page-reference .text-gray-500 {
+		opacity:0.4;
+	color: #ccc;
 	}
 /*==================================================*/       
 /* == block properties == */
@@ -851,31 +896,10 @@ html:not(.is-mac) ::-webkit-scrollbar {
     line-height: 1.75rem;
 	color: var(--admo-text-important);
 }
+/*==================================================*/       
+/* == modal == */
+/*==================================================*/ 	
 
-/*==================================================*/
-/*===== change look of image resize handle =========*/
-/*==================================================*/
-/* .ls-block img {
-    box-shadow: none;
-}
-.resize:hover	{
-    border: 1px dotted #18aeab ;
-}
-.resize::after {
-    pointer-events: none;
-    content: "⇲";
-	font-size: 14px;
-	font-family: arial;
-    position: absolute;
-    height: 12px;
-    width: 12px;
-    text-align: center;
-    bottom: 8px;
-    right: 4px;
-    background-color: rgb(32, 32, 32);
-    color: #fff;
-	z-index:10;
-}	 */
 /*==================================================*/
 /*===== unordered lists =========*/
 /*==================================================*/
@@ -886,9 +910,24 @@ ul {
 ul li::marker {	
 	font-size: 10px;
 	}
+	
 /*==================================================*/
-.left {float:left; margin: 20px 20px 20px 0px;}
-.right {float:right; margin: 20px 0px 20px 20px;}
-
+/* .left {float:left; margin: 20px 20px 20px 0px;}
+.right {float:right; margin: 20px 0px 20px 20px;} */
+	
+/*==================text============================*/
+	
+.text-gray-900 {
+    --tw-text-opacity: 1;
+    color: rgba(63,230,130,var(--tw-text-opacity));
+}
+/*==================================================*/       
+/* === tailwind ====*/ 
+/*==================================================*/    
+    .mr-3 {margin-right: 0px;} /* 0.75rem*/
+    .w-4 {width: 1rem;}
+    .h-5 {height: 1.5rem;}
+	.text-xs {font-size: 0.6rem}
+	.text-lg {font-size: 1rem}
 
 
