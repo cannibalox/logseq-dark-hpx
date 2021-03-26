@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Logseq-darker-hpx
 @namespace      https://github.com/cannibalox/logseq-dark-hpx
-@version        0.6.2
+@version        0.6.5
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq-dark-hpx/master/logseq-darker-hpx.user.css
@@ -144,9 +144,8 @@
   --pink-hover: #ff79c688;
   --logo-fill: #7de799;
 }   
-    :root {
-        --main-container-width: 840px;
-    }
+	
+	:root {--ls-main-content-max-width: 800px}
 /*==================================================*/    
 /* == fonts == */
 /*==================================================*/ 
@@ -178,17 +177,7 @@ a svg {
     color: var(--ls-icon-color);
 }
 
-/*==================================================*/  
-/* main container width 640 -> var(--main-container-width) */
-/*==================================================*/  
-/*    .cp__sidebar-main-content {
-        padding: 3rem 1.5rem;
-        margin: 0 auto;
-        max-width: var(--main-container-width);
-    }
-    .foldable-title {
-    max-width: var(--main-container-width);
-    }   */
+
 /*==================================================*/       
 /* == right sidebar == */
 /*==================================================*/ 
@@ -213,21 +202,19 @@ a svg {
 /* == blocks margin and 900 px width == */
 /*==================================================*/ 
 
-.ls-block {
+/* .ls-block {
     margin: 0.4em 0 0 0;
-    padding: 0;
-    max-width: var(--main-container-width); /* wider main container */
-}
+    padding: 0 0 1rem;
+} */
 /*==================================================*/       
-/* == blocks children tree line == */
+/* == blocks children tree line realign== */
 /*==================================================*/ 
 
 .block-children {
     border-left: 1px solid;
     border-left-color: var(--ls-guideline-color,#ddd);
-    left: -5px;
-    position: relative;
-    }
+    margin-left: 1.05rem !important; 
+	}
 /*==================================================*/       
 /* == search deco == */   
 /*==================================================*/ 
@@ -336,6 +323,9 @@ a svg {
         border: 1px solid var(--ls-page-checkbox-border-color) !important;
         border-radius: 20%;
     }
+	.form-checkbox:checked {
+		background-color: var(--ls-page-checkbox-border-color)   !important;
+	}
 /*==================================================*/       
 /* === TO DO / DOING marker-switch ===*/
 /*==================================================*/ 
@@ -451,7 +441,7 @@ a svg {
     .extensions__code {
     position: relative;
     z-index: 0;
-    max-width: calc(var(--main-container-width) - 50px); /* TEMP */
+    max-width: calc(var(--ls-main-content-max-width) - 50px); /* TEMP */
     overflow: auto;  
     }   
     /*=====*/
@@ -550,9 +540,15 @@ a svg {
 /*==================================================*/   
 /* == inline code == */
 /*==================================================*/ 
-    code, kbd, pre, samp {
+/*     code, kbd, pre, samp {
     font-family: Fira Code, Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     font-variant-ligatures: normal;
+} */
+:not(pre)>code {
+    border-radius: 3px;
+    font-size: .8rem;
+    font-family: JetBrainsMono NF, Meslo, MonoLisa,"Fira Code",Monaco,Menlo,Consolas,"COURIER NEW",monospace;
+    padding: 3px 5px!important;
 }
 /*==================================================*/   
 /* == iframes / yt embeds == */
@@ -579,18 +575,25 @@ a svg {
     
     .custom-query {
         background-color: var(--ls-secondary-background-color);
-        padding: 0.5rem .75rem 0.5rem .75rem;
+        padding: 0.2rem .5rem 0.2rem .5rem;
         margin: 0 0px 0 -10px;
        }
-    .block-body .custom-query .foldable-title .opacity-70::before {
-        content: "Query: ";
-        color: var(--ls-page-inline-code-color);
-        font-size: 85%;
-        font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-        display: inline;
-       }
-    .custom-query .opacity-70 {opacity: 1;}
-    
+/* 	.custom-query .p-1::before {
+        content: "";
+		color: var(--ls-page-inline-code-color);
+		font-size: 85%;
+        font-family: MesloLGS NF,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+          } */
+    .custom-query .opacity-70 {
+		opacity: 1;
+	}
+	
+	.custom-query .p-1 {
+		font-size: .65em;
+		font-family: JetBrainsMono NF, Meslo LG L for Powerline, Menlo, "Fira Code",Monaco,Consolas,"COURIER NEW",monospace;
+		margin-left:-10px;
+		background: none;
+}
 /*==================================================*/   
 /* == daily query NOW-TODO (...) exceptions == */
 /*==================================================*/   
@@ -610,31 +613,34 @@ a svg {
         border-top: none;
         padding: 0;
         min-height: 200px;
+
     }
     #journals .journal.page {
         min-height: 100px;
-        margin: 20px 0px 0px 30px;
+        margin: 0px;
         border: 0px solid var(--ls-block-bullet-border-color);
-        padding: 30px 0px 20px 0px;
+        padding: 0px;
+		
     }
     .journal-item.content .title .title {
         border-bottom: 1px solid var(--ls-title-text-color);
-        width: calc(var(--main-container-width) - 95px);
+        width: calc(var(--ls-main-content-max-width) - 160px);
 		font-size: 38px;
 		font-family: Barlow;
 		font-weight: 600;
 		color: var(--ls-primary-text-color);
-    }
+	    }
     #journals .title h1:before{
         content: "📅 ";
 		font-size: 24px;
 		vertical-align:top; 
-    }
+	    }
     #journals .journal-item {
     border-top: 0px solid;
     border-top-color: var(--ls-border-color,#738694);
     padding: 48px 0;
-    margin: 24px 0 24px 0px;
+    margin: 0px 0 20px 0px;
+	background: none;
 }
 /*==================================================*/   
 /* === titles headers=== */
@@ -821,12 +827,7 @@ html:not(.is-mac) ::-webkit-scrollbar {
     outline: 0;
     cursor: auto;
 }
-/*==================================================*/       
-/* === tailwind ====*/ 
-/*==================================================*/    
-    .mr-3 {margin-right: 0px;} /* 0.75rem*/
-    .w-4 {width: 1rem;}
-    .h-5 {height: 1.5rem;}
+
 /*==================================================*/       
 /* === external links ====*/ 
 /*==================================================*/
@@ -896,7 +897,25 @@ html:not(.is-mac) ::-webkit-scrollbar {
     line-height: 1.75rem;
 	color: var(--admo-text-important);
 }
-
+/*==================================================*/       
+/* == modal == */
+/*==================================================*/ 	
+.ui__modal {
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+	}
+.ui__modal-panel {
+    --tw-bg-opacity: 1;
+    background-color: rgba(16, 24, 27, var(--tw-bg-opacity));
+    border-radius: .375rem;
+    padding: 1.5rem;
+    --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+}
+.ui__modal-panel .panel-content {
+	padding: 1rem; 
+	}
 /*==================================================*/
 /*===== unordered lists =========*/
 /*==================================================*/
@@ -907,9 +926,27 @@ ul {
 ul li::marker {	
 	font-size: 10px;
 	}
+	
 /*==================================================*/
-.left {float:left; margin: 20px 20px 20px 0px;}
-.right {float:right; margin: 20px 0px 20px 20px;}
+/* .left {float:left; margin: 20px 20px 20px 0px;}
+.right {float:right; margin: 20px 0px 20px 20px;} */
+	
+/*==================text============================*/
+	
+.text-gray-900 {
+    --tw-text-opacity: 1;
+    color: rgba(63,230,130,var(--tw-text-opacity));
+}
+/*==================================================*/       
+/* === tailwind ====*/ 
+/*==================================================*/    
+    .mr-3 {margin-right: 0px;} /* 0.75rem*/
+    .w-4 {width: 1rem;}
+    .h-5 {height: 1.5rem;}
+	.text-xs {font-size: 0.6rem}
+	.text-lg {font-size: 1rem}
+
 
 }
+
 
