@@ -900,22 +900,7 @@ html:not(.is-mac) ::-webkit-scrollbar {
 /*==================================================*/       
 /* == modal == */
 /*==================================================*/ 	
-.ui__modal {
-	position: absolute;
-	bottom: 0%;
-	right: 0%;
-	}
-.ui__modal-panel {
-    --tw-bg-opacity: 1;
-    background-color: rgba(16, 24, 27, var(--tw-bg-opacity));
-    border-radius: .375rem;
-    padding: 1.5rem;
-    --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
-}
-.ui__modal-panel .panel-content {
-	padding: 1rem; 
-	}
+
 /*==================================================*/
 /*===== unordered lists =========*/
 /*==================================================*/
@@ -945,8 +930,5 @@ ul li::marker {
     .h-5 {height: 1.5rem;}
 	.text-xs {font-size: 0.6rem}
 	.text-lg {font-size: 1rem}
-
-
 }
-
 
