@@ -1,0 +1,101 @@
+{
+  "name": "HPX theme",
+  "description": "a dark theme for logseq with some extra features",
+  "author": "cannibalox",
+  "version": "0.6.5",
+  "repository": "cannibalox/logseq-dark-hpx",
+  "logseq": {
+    "themes": [
+      {
+        "name": "HPX darker",
+        "url": "./logseq-darker-hpx.css",
+        "description": "xyz"
+      },
+	  	  {
+        "name": "HPX dark",
+        "url": "./logseq-dark-hpx.css",
+        "description": "xyz"
+      },
+      {
+        "name": "HPX colorful indents",
+        "url": "./logseq-colorful-indents.css",
+        "description": "xyz"
+      },
+      {
+        "name": "HPX columns mod",
+        "url": "./logseq-columns-mod.css",
+        "description": "xyz"
+      },
+	  {
+        "name": "HPX dirty focus mode",
+        "url": "./logseq-dirty-focus-mode.css",
+        "description": "xyz"
+      },
+	  {
+        "name": "HPX highlight current path",
+        "url": "./logseq-highlight-current-path.css",
+        "description": "xyz"
+      },
+	  {
+        "name": "HPX flex containers",
+        "url": "./logseq-flex-containers.css",
+        "description": "xyz"
+      },
+	  {
+        "name": "HPX iconify external links",
+        "url": "./logseq-iconify-external-links.css",
+        "description": "costam"
+      },
+	  {
+        "name": "HPX kanban block view",
+        "url": "./logseq-kanban-block-view.css",
+        "description": "costam"
+      },
+	  {
+        "name": "HPX numbered list",
+        "url": "./logseq-numbered-list.css",
+        "description": "costam"
+      },
+	  {
+        "name": "HPX page columns",
+        "url": "./logseq-page-columns.css",
+        "description": "costam"
+      },
+	  {
+        "name": "HPX pretty td mode",
+        "url": "./logseq-pretty-td-mode.css",
+        "description": "costam"
+      },
+	  {
+        "name": "HPX scroll sidebar",
+        "url": "./logseq-scroll-sidebar.css",
+        "description": "costam"
+      },
+	  {
+        "name": "HPX sidebarmod",
+        "url": "./logseq-sidebarmod.css",
+        "description": "costam"
+      },
+	  {
+        "name": "HPX topbullet as heading",
+        "url": "./logseq-topbullet_as_heading.css",
+        "description": "costam"
+      },
+	  {
+        "name": "HPX kanban view",
+        "url": "./logseq-view-kanban.css",
+        "description": "costam"
+      },
+	  {
+        "name": "HPX ls numbered list complex",
+        "url": "./wip-ls-numbered-list-complex.css",
+        "description": "costam"
+      },
+	  {
+        "name": "HPX alternate color palette by Dale502 deprecated",
+        "url": "./z-deprecated_logseq-dark-dale502.user.css",
+        "description": "costam"
+      }
+    ]
+  }
+}
