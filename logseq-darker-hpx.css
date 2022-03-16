@@ -356,14 +356,14 @@ a svg {
     padding: 0 0px;
     margin: 0px;
     position: absolute;
-    left: 20px;
+    left: 63px;
 	top: 0px;
     }    
 [title="Change from DOING to TODO"] {
     color: var(--text-accent);
     background-color: var(--marker-switch-bgcolor);
     opacity: 0.8;
-    display:inline-block;
+ /* display:inline-block;  --shows wrong, this is easiest fix for now, but show whole TODO/DOING instead of one letter T/D */
     margin: 0 5px 0 20px;
     padding: 0 0 0 0px;
 }   
@@ -373,7 +373,7 @@ a svg {
     padding: 0 0px;
     margin: 0 0px;
     position: absolute;
-    left: 20px;  
+    left: 63px;  
     }   
 /*==================================================*/   
 /* == codemirror code blocks == */
