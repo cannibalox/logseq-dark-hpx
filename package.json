@@ -97,5 +97,8 @@
         "description": "costam"
       }
     ]
-  }
+  },
+  "repo":"cannibalox/logseq-dark-hpx",
+  "title":"HPX theme",
+  "effect":false
 }
