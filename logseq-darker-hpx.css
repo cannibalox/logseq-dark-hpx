@@ -347,7 +347,7 @@ a svg {
     color: var(--marker-switch-color);
     opacity: 0.8;
     visibility: visible;
-    display:inline-block;
+   /* display:inline-block;  --shows wrong, this is easiest fix for now, but show whole TODO/DOING instead of one letter T/D */
     margin: 0 5px 0 20px;
     padding: 0 0 0 0px;
     }
