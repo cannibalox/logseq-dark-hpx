@@ -347,7 +347,7 @@ a svg {
     color: var(--marker-switch-color);
     opacity: 0.8;
     visibility: visible;
-    display:inline-block;
+   /* display:inline-block;  --shows wrong, this is easiest fix for now, but show whole TODO/DOING instead of one letter T/D */
     margin: 0 5px 0 20px;
     padding: 0 0 0 0px;
     }
@@ -356,14 +356,14 @@ a svg {
     padding: 0 0px;
     margin: 0px;
     position: absolute;
-    left: 20px;
+    left: 63px;
 	top: 0px;
     }    
 [title="Change from DOING to TODO"] {
     color: var(--text-accent);
     background-color: var(--marker-switch-bgcolor);
     opacity: 0.8;
-    display:inline-block;
+ /* display:inline-block;  --shows wrong, this is easiest fix for now, but show whole TODO/DOING instead of one letter T/D */
     margin: 0 5px 0 20px;
     padding: 0 0 0 0px;
 }   
@@ -373,7 +373,7 @@ a svg {
     padding: 0 0px;
     margin: 0 0px;
     position: absolute;
-    left: 20px;  
+    left: 63px;  
     }   
 /*==================================================*/   
 /* == codemirror code blocks == */
@@ -707,68 +707,68 @@ a svg {
 		color: white !important;
 		background-color: var(--accent-bgcolor);
 	}
-	a.tag[href*="important"] {
+	a.tag[data-ref*="important"] {
 	  color: #fd3434;
 	  border-color: #fb3030;
 	}    
-	a.tag[href*="inprogress"] {
+	a.tag[data-ref*="inprogress"] {
 	  color: #adf752;
 	}       
-	a.tag[href*="done"] {
+	a.tag[data-ref*="done"] {
 	  color: #31cfbb;
 	}      
-	a.tag[href*="book"]:after {
+	a.tag[data-ref*="book"]:after {
 	  content: "📚";
 	}  
-	a.tag[href*="movie"]:after {
+	a.tag[data-ref*="movie"]:after {
 	  content: "🎞";
 	}  
-	a.tag[href*="soft"]:after {
+	a.tag[data-ref*="soft"]:after {
 	  content: "💾";
 	}  
-	a.tag[href*="tools"]:after {
+	a.tag[data-ref*="tools"]:after {
 	  content: "🛠";
 	}  
-	a.tag[href*="hardware"]:after {
+	a.tag[data-ref*="hardware"]:after {
 	  content: "💻";
 	}  
-	a.tag[href*="TV"]:after {
+	a.tag[data-ref*="TV"]:after {
 	  content: "📺";
 	} 
-	a.tag[href*="3d"]:after {
+	a.tag[data-ref*="3d"]:after {
 	  content: "💠";
 	} 
-	a.tag[href*="2d"]:after {
+	a.tag[data-ref*="2d"]:after {
 	  content: "🎨";
 	}  
-	a.tag[href*="science"]:after {
+	a.tag[data-ref*="science"]:after {
 	  content: "🧪";
 	}   
-	a.tag[href*="boardgame"]:after {
+	a.tag[data-ref*="boardgame"]:after {
 	  content: "🎲";
 	}   
-	a.tag[href="#games"]:after {
+	a.tag[data-ref="#games"]:after {
 	  content: "🕹";
 	}          
-	a.tag[href*="audio"]:after {
+	a.tag[data-ref*="audio"]:after {
 	  content: "🎧";
 	}          
-	a.tag[href*="travel"]:after {
+	a.tag[data-ref*="travel"]:after {
 	  content: "✈";
 	}     
-	a.tag[href*="2buy"]:after {
+	a.tag[data-ref*="2buy"]:after {
 	  content: "🛒";
 	} 
-	a.tag[href*="health"]:after {
+	a.tag[data-ref*="health"]:after {
 	  content: "💊";
 	} 
-	a.tag[href*="photo"]:after {
+	a.tag[data-ref*="photo"]:after {
 	  content: "📷";
 	} 
-	a.tag[href*="food"]:after {
+	a.tag[data-ref*="food"]:after {
 	  content: "🥗";
 	} 
-	a.tag[href*="cloth"]:after {
+	a.tag[data-ref*="cloth"]:after {
 	  content: "👕";
 	} 
 
