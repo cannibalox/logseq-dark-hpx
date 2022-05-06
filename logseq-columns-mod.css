@@ -1,8 +1,8 @@
-/* columns view css mod by cannibalox v0.2  20210131 */
-/* SETTINGS: adjust width of the page and cards below*/
+
+/* columns view css mod by cannibalox v0.3  20220506 */
+/* SETTINGS: adjust width of cards below*/
 
 	:root {
-		--main-container-width : 1800px; 
 		--mod-cards-width: 252px;
 		}  
 
@@ -10,49 +10,26 @@
 /* ==== columns view layout ==== */
 /* ====================-======== */
 
-	.cp__sidebar-main-content {
-			padding: 2rem 1.5rem;
-			margin: 0;
-			max-width: var(--main-container-width);
-		}
-	.foldable-title {
-		max-width: var(--main-container-width);
-		}   
-	div[level="2"]{
+[data-page-tags*=".p-cards"] .block-children.w-full {
+        flex-wrap: wrap;
+        flex-direction: row;
+    } 
+[data-page-tags*=".p-cards"] .ls-block[level="2"] {
 		display:inline-block;
 		width: var(--mod-cards-width); 
-		position:absolute;
-		top: 10px;
 		vertical-align: top;
-		margin-bottom: 20px;
-	}
-	.embed-block .ls-block {
-		display: inline;
-	}
-
-/* ============================== */
-/* === tweak layout margins  ==== */
-	
-.blocks-container,.doc-mode {
-		margin: 0px 0;
-	}
-
-/* ============================== */
-/* ======== cards look ========== */
-	
-div[level="2"]{
-		box-shadow: 2px 2px 3px #0000003b;
+        box-shadow: 2px 2px 3px #0000003b;
 		border: 1px solid black;
 		border-radius: 6px;
 		background-color: var(--ls-tertiary-background-color);
-		margin: 0px 15px 15px 0px; /* SPACE BETWEEN CARDS */
-		padding: 1em 0.5em;  /* CARDS BOARDER */
+        padding: 10px 0px 0px 0px;
 	}
-	.block-children .ls-block {
+[data-page-tags*=".p-cards"] .embed-block .ls-block {
+		display: inline;
+	}
+
+[data-page-tags*=".p-cards"] .block-children .ls-block {
 		border: 0px solid var(--ls-secondary-text-color);
-		margin: 0px;
+		margin: 4px;
 	}
-	.ls-block {
-		margin: 0px 12px 0px -2px;
-		padding: 5px 8px 0px 0px;
-	}
+
